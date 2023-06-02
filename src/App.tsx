@@ -1,10 +1,14 @@
 import React from 'react';
-import './index.css'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import './index.css';
+import { MainPage } from './components/pages/Main';
 
 function App() {
     return (
-        <div className="App">
-        </div>
+        <Routes>
+            <Route path='/' element={ <MainPage/> }/>
+            <Route path='*' element={ <Navigate to='/'/> }/>
+        </Routes>
     );
 }
 
