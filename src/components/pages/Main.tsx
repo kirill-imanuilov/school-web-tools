@@ -3,16 +3,26 @@ import '../../index.css';
 
 export function MainPage() {
     return (
-        <div className='page'>
-            <div className='container'>
-                <h1 className='container-title'>School Web Tools</h1>
-                <div className='container-content'>
+        <div
+            className='page'
+        >
+            <div
+                className='container'
+            >
+                <h1
+                    className='container-title'
+                >
+                    School Web Tools
+                </h1>
+                <div
+                    className='container-content'
+                >
                     <Link
                         to='data_sending'
                         className='button-link'
                     >
                         <button>
-                        Отправка данных
+                            Отправка данных
                         </button>
                     </Link>
                     <Link
@@ -20,7 +30,7 @@ export function MainPage() {
                         className='button-link'
                     >
                         <button>
-                        О сайте
+                            О сайте
                         </button>
                     </Link>
                 </div>
