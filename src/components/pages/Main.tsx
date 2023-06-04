@@ -5,7 +5,7 @@ export function MainPage() {
     return (
         <div className='page'>
             <div className='container'>
-                <h1 className='container-title'>SchoolWebTools</h1>
+                <h1 className='container-title'>School Web Tools</h1>
                 <Link
                     to='data_sending'
                     className='button-link'
