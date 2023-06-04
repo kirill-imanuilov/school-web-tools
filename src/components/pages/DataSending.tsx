@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import '../../index.css'
-import { DataSendingForm } from '../DataSendingForm'
+import { Link } from 'react-router-dom';
+import '../../index.css';
+import { DataSendingForm } from '../DataSendingForm';
 
 export function DataSendingPage() {
     return (

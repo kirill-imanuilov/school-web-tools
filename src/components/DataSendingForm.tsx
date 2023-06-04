@@ -1,5 +1,5 @@
-import '../index.css'
-import { ReactComponent as AttachFileIMG } from '../attach_file_img.svg'
+import '../index.css';
+import { ReactComponent as AttachFileIMG } from '../attach_file_img.svg';
 
 export function DataSendingForm() {
     return (
@@ -28,6 +28,6 @@ export function DataSendingForm() {
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
