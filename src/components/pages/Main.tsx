@@ -26,6 +26,14 @@ export function MainPage() {
                         </button>
                     </Link>
                     <Link
+                        to='useful_materials'
+                        className='button-link'
+                    >
+                        <button>
+                            Полезные материалы
+                        </button>
+                    </Link>
+                    <Link
                         to='about'
                         className='button-link'
                     >

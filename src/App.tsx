@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
 import { MainPage } from './components/pages/Main';
 import { DataSendingPage } from './components/pages/DataSending';
+import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
 import { AboutPage } from './components/pages/About';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
             <Route
                 path='/data_sending/'
                 element={ <DataSendingPage/> }/>
+            <Route
+                path='/useful_materials/'
+                element={ <UsefulMaterialsPage/> }/>
             <Route
                 path='/about/'
                 element={ <AboutPage/> }/>
