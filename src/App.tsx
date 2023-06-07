@@ -4,6 +4,7 @@ import './index.css';
 import { MainPage } from './components/pages/Main';
 import { DataSendingPage } from './components/pages/DataSending';
 import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
+import { ForTeachersPage } from './components/pages/ForTeachers';
 import { AboutPage } from './components/pages/About';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
             <Route
                 path='/useful_materials/'
                 element={ <UsefulMaterialsPage/> }/>
+            <Route
+                path='/for_teachers/'
+                element={ <ForTeachersPage/> }/>
             <Route
                 path='/about/'
                 element={ <AboutPage/> }/>

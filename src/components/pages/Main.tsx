@@ -34,6 +34,14 @@ export function MainPage() {
                         </button>
                     </Link>
                     <Link
+                        to='for_teachers'
+                        className='button-link'
+                    >
+                        <button>
+                            Для учителей
+                        </button>
+                    </Link>
+                    <Link
                         to='about'
                         className='button-link'
                     >
