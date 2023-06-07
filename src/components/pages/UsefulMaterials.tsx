@@ -9,7 +9,12 @@ interface UsefulMaterialsItemsProps {
 }
 
 export function UsefulMaterialsPage() {
-    const usefulMaterialsItems = UsefulMaterialsData.map((usefulMaterialsItem, index:number) => <UsefulMaterialsItems usefulMaterialsItem={ usefulMaterialsItem } key={ index }/>)
+    const usefulMaterialsItems = UsefulMaterialsData.map((
+        usefulMaterialsItem,
+        index: number) =>
+    <UsefulMaterialsItems
+        usefulMaterialsItem={ usefulMaterialsItem }
+        key={ index }/>)
     return (
         <div
             className='page'
