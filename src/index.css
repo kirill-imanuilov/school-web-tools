@@ -111,3 +111,35 @@ button:active
     gap: 5px;
 }
 
+.useful-materials-items
+{
+    display: grid;
+    gap: 5px;
+}
+
+.useful-materials-item
+{
+    display: flex;
+    gap: 5px;
+}
+
+.useful-materials-button-link
+{
+    flex: 1;
+}
+
+.useful-materials-copy-button
+{
+    display: flex;
+    width: 50px;
+    margin-left: auto;
+}
+
+.content-copy-img,
+.done-img
+{
+    width: auto;
+    height: auto;
+    fill: #FFFFFF;
+}
+
