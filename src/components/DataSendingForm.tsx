@@ -27,7 +27,6 @@ export function DataSendingForm() {
                 </label>
                 <button
                     type='submit'
-                    className='data-sending-form-submit-button'
                 >
                     Отправить
                 </button>
