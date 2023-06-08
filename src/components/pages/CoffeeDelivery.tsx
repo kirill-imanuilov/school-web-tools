@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import { CoffeeDeliveryForm } from '../CoffeeDeliveryForm';
 
 export function CoffeeDeliveryPage() {
     return (
@@ -17,6 +18,7 @@ export function CoffeeDeliveryPage() {
                 <div
                     className='container-content'
                 >
+                    <CoffeeDeliveryForm/>
                     <Link
                         to='/for_teachers/'
                         className='button-link'
