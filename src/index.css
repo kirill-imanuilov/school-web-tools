@@ -71,7 +71,8 @@ button:active
     gap: 5px;
 }
 
-.data-sending-form-item
+.data-sending-form-item,
+.coffee-delivery-form-input
 {
     width: auto;
     border-radius: 10px;
@@ -98,10 +99,18 @@ button:active
     width: auto;
 }
 
-.attach-file-img
+.attach-file-img,
+.content-copy-img,
+.done-img
 {
     height: auto;
     width: auto;
+}
+
+.content-copy-img,
+.done-img
+{
+    fill: #FFFFFF;
 }
 
 .data-sending-form-bottom-container
@@ -135,14 +144,6 @@ button:active
     margin-left: auto;
 }
 
-.content-copy-img,
-.done-img
-{
-    width: auto;
-    height: auto;
-    fill: #FFFFFF;
-}
-
 .coffee-delivery-form
 {
     display: grid;
@@ -165,8 +166,8 @@ button:active
     align-items: center;
 }
 
-.coffee-delivery-form-checkbox,
-.coffee-delivery-form-checkbox:checked
+input[type='checkbox'],
+input[type='checkbox']:checked
 {
     appearance: none;
     border: 1px solid #CCCCCC;
@@ -176,18 +177,9 @@ button:active
     cursor: pointer;
 }
 
-.coffee-delivery-form-checkbox:checked
+input[type='checkbox']:checked
 {
     background-color: #005DFF;
-}
-
-.coffee-delivery-form-input
-{
-    width: auto;
-    border-radius: 10px;
-    border: 1px solid #CCCCCC;
-    padding: 10px;
-    font-size: 20px;
 }
 
 .coffee-delivery-form-input-office

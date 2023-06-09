@@ -41,22 +41,22 @@ export function CoffeeDeliveryForm() {
                 </option>
             </select>
             <label className='coffee-delivery-form-checkbox-label'>
-                <input className='coffee-delivery-form-checkbox'
+                <input
                     type='checkbox'/>
                 Сахар
             </label>
             <label className='coffee-delivery-form-checkbox-label'>
-                <input className='coffee-delivery-form-checkbox'
+                <input
                     type='checkbox'/>
                 Корица
             </label>
             <label className='coffee-delivery-form-checkbox-label'>
-                <input className='coffee-delivery-form-checkbox'
+                <input
                     type='checkbox'/>
                 Сливки
             </label>
             <label className='coffee-delivery-form-checkbox-label'>
-                <input className='coffee-delivery-form-checkbox'
+                <input
                     type='checkbox'/>
                 Лимон
             </label>
