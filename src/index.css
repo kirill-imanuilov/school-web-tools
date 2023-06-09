@@ -181,3 +181,28 @@ button:active
     background-color: #005DFF;
 }
 
+.coffee-delivery-form-input
+{
+    width: auto;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.coffee-delivery-form-input-office
+{
+    width: 2em;
+}
+
+.coffee-delivery-form-select-building
+{
+    width: 100%;
+}
+
+.coffee-delivery-form-top-container
+{
+    display: flex;
+    gap: 5px;
+}
+

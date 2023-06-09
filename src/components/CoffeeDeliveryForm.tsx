@@ -4,6 +4,21 @@ export function CoffeeDeliveryForm() {
     return (
         <form className='coffee-delivery-form'
         >
+            <input className='coffee-delivery-form-input coffee-delivery-form-input-name'
+                placeholder='ФИО'/>
+            <div className='coffee-delivery-form-top-container'>
+                <input className='coffee-delivery-form-input coffee-delivery-form-input-office'
+                    placeholder='Каб.'/>
+                <select className='coffee-delivery-form-select coffee-delivery-form-select-building'
+                >
+                    <option>
+                        Старый корпус
+                    </option>
+                    <option>
+                        Новый корпус
+                    </option>
+                </select>
+            </div>
             <select className='coffee-delivery-form-select'
             >
                 <option>
