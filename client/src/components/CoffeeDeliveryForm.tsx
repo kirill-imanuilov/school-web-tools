@@ -22,12 +22,6 @@ export function CoffeeDeliveryForm() {
             <select className='coffee-delivery-form-select'
             >
                 <option>
-                    Ристретто
-                </option>
-                <option>
-                    Эспрессо
-                </option>
-                <option>
                     Американо
                 </option>
                 <option>
@@ -39,12 +33,13 @@ export function CoffeeDeliveryForm() {
                 <option>
                     Раф
                 </option>
+                <option>
+                    Ристретто
+                </option>
+                <option>
+                    Эспрессо
+                </option>
             </select>
-            <label className='coffee-delivery-form-checkbox-label'>
-                <input
-                    type='checkbox'/>
-                Сахар
-            </label>
             <label className='coffee-delivery-form-checkbox-label'>
                 <input
                     type='checkbox'/>
@@ -53,12 +48,17 @@ export function CoffeeDeliveryForm() {
             <label className='coffee-delivery-form-checkbox-label'>
                 <input
                     type='checkbox'/>
-                Сливки
+                Лимон
             </label>
             <label className='coffee-delivery-form-checkbox-label'>
                 <input
                     type='checkbox'/>
-                Лимон
+                Сахар
+            </label>
+            <label className='coffee-delivery-form-checkbox-label'>
+                <input
+                    type='checkbox'/>
+                Сливки
             </label>
             <select className='coffee-delivery-form-select'
             >
@@ -69,16 +69,16 @@ export function CoffeeDeliveryForm() {
                     Ванильный сироп
                 </option>
                 <option>
-                    Карамельный сироп
-                </option>
-                <option>
-                    Шоколадный сироп
-                </option>
-                <option>
                     Грушевый сироп
                 </option>
                 <option>
                     Имбирный сироп
+                </option>
+                <option>
+                    Карамельный сироп
+                </option>
+                <option>
+                    Шоколадный сироп
                 </option>
             </select>
             <select className='coffee-delivery-form-select'
