@@ -1,6 +1,19 @@
 import '../index.css';
 
 export function CoffeeDeliveryForm() {
+    const date = new Date();
+    const coffeeCookingTime = 5;
+    const allMinutes = date.getMinutes() + date.getHours() * 60 + coffeeCookingTime;
+    const hours = parseInt(`${allMinutes / 60}`);
+    const minutes = allMinutes % 60;
+    const startTime = '8:00';
+    const closingTime = '16:00';
+    var time = '';
+    if (`${minutes}`.length == 1) {
+        time = `${hours}:0${minutes}`;
+    } else {
+        time = `${hours}:${minutes}`;
+    }
     return (
         <form className='coffee-delivery-form'
         >
@@ -19,6 +32,10 @@ export function CoffeeDeliveryForm() {
                     </option>
                 </select>
             </div>
+            <input className='coffee-delivery-form-input coffee-delivery-form-input-time'
+                type='time'
+                min={time}
+                max={closingTime}/>
             <select className='coffee-delivery-form-select'
             >
                 <option>
@@ -93,11 +110,18 @@ export function CoffeeDeliveryForm() {
                     Шоколадка
                 </option>
             </select>
-            <button
+            {time <= closingTime && <button
                 type='submit'
             >
                 Отправить
-            </button>
+            </button>}
+            {time > closingTime && <button
+                className='submit-button-disabled'
+                type='submit'
+                disabled
+            >
+                Отправить
+            </button>}
         </form>
     );
 }

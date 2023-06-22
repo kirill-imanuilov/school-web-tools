@@ -198,3 +198,23 @@ input[type='checkbox']:checked
     gap: 5px;
 }
 
+.coffee-delivery-form-input-time
+{
+    width: auto;
+    cursor: pointer;
+}
+
+.submit-button-disabled
+{
+    background-color: #005DFF;
+    cursor: not-allowed;
+}
+
+.submit-button-disabled:hover,
+.submit-button-disabled:focus,
+.submit-button-disabled:active
+{
+    color: #FFFFFF;
+    background-color: #005DFF;
+}
+
