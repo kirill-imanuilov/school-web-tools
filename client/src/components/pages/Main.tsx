@@ -26,6 +26,14 @@ export function MainPage() {
                         </button>
                     </Link>
                     <Link
+                        to='timer'
+                        className='button-link'
+                    >
+                        <button>
+                            Таймер
+                        </button>
+                    </Link>
+                    <Link
                         to='useful_materials'
                         className='button-link'
                     >
