@@ -1,297 +1,256 @@
-html
-{
-    font-family: sans-serif;
-    font-size: 20px;
+html {
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
-.page
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.container
-{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    max-width: 500px;
-    box-shadow: 0px 0px 30px #CCCCCC;
-    border-radius: 10px;
-    padding: 15px;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 500px;
+  box-shadow: 0px 0px 30px #cccccc;
+  border-radius: 10px;
+  padding: 15px;
 }
 
-.container-title
-{
-    width: 100%;
-    text-align: center;
-    font-weight: normal;
+.container-title {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
 }
 
-button
-{
-    font-size: 20px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #005DFF;
-    color: #FFFFFF;
-    cursor: pointer;
+button {
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #005dff;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 button:hover,
 button:focus,
-button:active
-{
-    background-color: #0054E5;
-    color: #E5E5E5;
+button:active {
+  background-color: #0054e5;
+  color: #e5e5e5;
 }
 
-.button-link
-{
-    outline: none;
+.button-link {
+  outline: none;
 }
 
-.container-content
-{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.container-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.data-sending-form
-{
-    display: grid;
-    grid-template-rows: 50px 150px 50px;
-    gap: 5px;
+.data-sending-form {
+  display: grid;
+  grid-template-rows: 50px 150px 50px;
+  gap: 5px;
 }
 
 .data-sending-form-item,
-.coffee-delivery-form-input
-{
-    width: auto;
-    border-radius: 10px;
-    border: 1px solid #CCCCCC;
-    padding: 10px;
-    font-size: 20px;
+.coffee-delivery-form-input {
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 20px;
 }
 
-.data-sending-form-input-message
-{
-    overflow: hidden;
-    resize: none;
+.data-sending-form-input-message {
+  overflow: hidden;
+  resize: none;
 }
 
-.data-sending-form-input-file
-{
-    display: none;
+.data-sending-form-input-file {
+  display: none;
 }
 
-.data-sending-form-input-file-label
-{
-    display: flex;
-    cursor: pointer;
-    width: auto;
+.data-sending-form-input-file-label {
+  display: flex;
+  cursor: pointer;
+  width: auto;
 }
 
 .attach-file-img,
 .content-copy-img,
 .done-img,
 .timer-button-img,
-.timer-arrow-img
-{
-    height: auto;
-    width: auto;
+.timer-arrow-img {
+  height: auto;
+  width: auto;
 }
 
 .content-copy-img,
 .done-img,
-.timer-button-img
-{
-    fill: #FFFFFF;
+.timer-button-img {
+  fill: #ffffff;
 }
 
-.data-sending-form-bottom-container
-{
-    display: flex;
-    width: 100%;
-    gap: 5px;
+.data-sending-form-bottom-container {
+  display: flex;
+  width: 100%;
+  gap: 5px;
 }
 
-.useful-materials-items
-{
-    display: grid;
-    gap: 5px;
+.useful-materials-items {
+  display: grid;
+  gap: 5px;
 }
 
-.useful-materials-item
-{
-    display: flex;
-    gap: 5px;
+.useful-materials-item {
+  display: flex;
+  gap: 5px;
 }
 
-.useful-materials-button-link
-{
-    flex: 1;
+.useful-materials-button-link {
+  flex: 1;
 }
 
-.useful-materials-copy-button
-{
-    display: flex;
-    width: 50px;
-    margin-left: auto;
+.useful-materials-copy-button {
+  display: flex;
+  width: 50px;
+  margin-left: auto;
 }
 
-.coffee-delivery-form
-{
-    display: grid;
-    gap: 5px;
+.coffee-delivery-form {
+  display: grid;
+  gap: 5px;
 }
 
-.coffee-delivery-form-select
-{
-    border-radius: 10px;
-    border: 1px solid #CCCCCC;
-    padding: 10px;
-    font-size: 20px;
-    height: 50px;
-    cursor: pointer;
+.coffee-delivery-form-select {
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 20px;
+  height: 50px;
+  cursor: pointer;
 }
 
-.coffee-delivery-form-checkbox-label
-{
-    display: flex;
-    align-items: center;
+.coffee-delivery-form-checkbox-label {
+  display: flex;
+  align-items: center;
 }
 
 input[type='checkbox'],
-input[type='checkbox']:checked
-{
-    appearance: none;
-    border: 1px solid #CCCCCC;
-    border-radius: 10px;
-    width: 1.5em;
-    height: 1.5em;
-    cursor: pointer;
+input[type='checkbox']:checked {
+  appearance: none;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
 }
 
-input[type='checkbox']:checked
-{
-    background-color: #005DFF;
+input[type='checkbox']:checked {
+  background-color: #005dff;
 }
 
-.coffee-delivery-form-input-office
-{
-    width: 2em;
+.coffee-delivery-form-input-office {
+  width: 2em;
 }
 
-.coffee-delivery-form-select-building
-{
-    width: 100%;
+.coffee-delivery-form-select-building {
+  width: 100%;
 }
 
-.coffee-delivery-form-top-container
-{
-    display: flex;
-    gap: 5px;
+.coffee-delivery-form-top-container {
+  display: flex;
+  gap: 5px;
 }
 
-.coffee-delivery-form-input-time
-{
-    width: auto;
-    cursor: pointer;
+.coffee-delivery-form-input-time {
+  width: auto;
+  cursor: pointer;
 }
 
-.submit-button-disabled
-{
-    background-color: #005DFF;
-    cursor: not-allowed;
+.submit-button-disabled {
+  background-color: #005dff;
+  cursor: not-allowed;
 }
 
 .submit-button-disabled:hover,
 .submit-button-disabled:focus,
-.submit-button-disabled:active
-{
-    color: #FFFFFF;
-    background-color: #005DFF;
+.submit-button-disabled:active {
+  color: #ffffff;
+  background-color: #005dff;
 }
 
-.timer
-{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
+.timer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
 }
 
-.timer-values
-{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 40px;
-    border: 1px solid #CCCCCC;
-    border-radius: 10px;
-    width: fit-content;
-    padding: 10px;
+.timer-values {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
 }
 
-.timer-button
-{
-    display: flex;
-    height: 50px;
-    width: 50px;
+.timer-button {
+  display: flex;
+  height: 50px;
+  width: 50px;
 }
 
-.timer-buttons
-{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 10px;
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.set-time
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
+.set-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
 }
 
-.set-time-item
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid #CCCCCC;
-    font-size: 20px;
-    width: 50px;
+.set-time-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  font-size: 20px;
+  width: 50px;
 }
 
-.timer-arrow-img
-{
-    cursor: pointer;
+.timer-arrow-img {
+  cursor: pointer;
 }
 
-.timer-arrow-button
-{
-    display: flex;
-    align-items: center;
-    background-color: transparent;
+.timer-arrow-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
 }
 
 .timer-arrow-button:hover,
 .timer-arrow-button:focus,
-.timer-arrow-button:active
-{
-    background-color: transparent;
+.timer-arrow-button:active {
+  background-color: transparent;
 }
-
