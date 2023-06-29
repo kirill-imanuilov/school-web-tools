@@ -10,6 +10,9 @@ export function TimePage() {
           <Link to='timer/' className='button-link'>
             <button>Таймер</button>
           </Link>
+          <Link to='stopwatch/' className='button-link'>
+            <button>Секундомер</button>
+          </Link>
           <Link to='/' className='button-link'>
             <button>Назад</button>
           </Link>

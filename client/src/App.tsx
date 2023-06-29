@@ -4,6 +4,7 @@ import { MainPage } from './components/pages/Main';
 import { DataSendingPage } from './components/pages/DataSending';
 import { TimePage } from './components/pages/Time'
 import { TimerPage } from './components/pages/Timer'
+import { StopwatchPage } from './components/pages/Stopwatch'
 import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
 import { ForTeachersPage } from './components/pages/ForTeachers';
 import { CoffeeDeliveryPage } from './components/pages/CoffeeDelivery';
@@ -21,6 +22,9 @@ function App() {
             <Route
                 path='/time/timer/'
                 element={ <TimerPage/> }/>
+            <Route
+                path='/time/stopwatch/'
+                element={ <StopwatchPage/> }/>
             <Route
                 path='/useful_materials/'
                 element={ <UsefulMaterialsPage/> }/>
