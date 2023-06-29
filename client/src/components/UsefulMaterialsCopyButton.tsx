@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ReactComponent as ContentCopyIMG } from '../content_copy_img.svg'
-import { ReactComponent as DoneIMG } from '../done_img.svg'
+import { ReactComponent as ContentCopyIMG } from '../IMG/content_copy_img.svg'
+import { ReactComponent as DoneIMG } from '../IMG/done_img.svg'
 
 interface UsefulMaterialsCopyButtonProps {
     url: string;
