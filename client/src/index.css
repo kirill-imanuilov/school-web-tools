@@ -19,6 +19,7 @@ html {
   box-shadow: 0px 0px 30px #cccccc;
   border-radius: 10px;
   padding: 15px;
+  margin: auto;
 }
 
 .container-title {
