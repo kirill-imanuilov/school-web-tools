@@ -65,11 +65,14 @@ button:active {
 
 .data-sending-form-item,
 .coffee-delivery-form-input {
-  width: auto;
   border-radius: 10px;
   border: 1px solid #cccccc;
   padding: 10px;
   font-size: 20px;
+}
+
+.data-sending-form-item {
+  width: calc(100% - 21.6px);
 }
 
 .data-sending-form-input-message {
@@ -129,7 +132,8 @@ button:active {
 }
 
 .coffee-delivery-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
