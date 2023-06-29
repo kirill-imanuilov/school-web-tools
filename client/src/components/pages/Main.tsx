@@ -26,11 +26,11 @@ export function MainPage() {
                         </button>
                     </Link>
                     <Link
-                        to='timer'
+                        to='time'
                         className='button-link'
                     >
                         <button>
-                            Таймер
+                            Время
                         </button>
                     </Link>
                     <Link

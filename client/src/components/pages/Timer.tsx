@@ -20,7 +20,7 @@ export function TimerPage() {
                 >
                     <Timer/>
                     <Link
-                        to='/'
+                        to='/time/'
                         className='button-link'
                     >
                         <button>
