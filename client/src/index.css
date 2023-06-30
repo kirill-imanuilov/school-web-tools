@@ -94,14 +94,16 @@ button:active {
 .content-copy-img,
 .done-img,
 .timer-button-img,
-.timer-arrow-img {
+.timer-arrow-img,
+.stopwatch-button-img {
   height: auto;
   width: auto;
 }
 
 .content-copy-img,
 .done-img,
-.timer-button-img {
+.timer-button-img,
+.stopwatch-button-img {
   fill: #ffffff;
 }
 
@@ -195,14 +197,16 @@ input[type='checkbox']:checked {
   background-color: #005dff;
 }
 
-.timer {
+.timer,
+.stopwatch {
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items: center;
 }
 
-.timer-values {
+.timer-values,
+.stopwatch-values {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -213,13 +217,15 @@ input[type='checkbox']:checked {
   padding: 10px;
 }
 
-.timer-button {
+.timer-button,
+.stopwatch-button {
   display: flex;
   height: 50px;
   width: 50px;
 }
 
-.timer-buttons {
+.timer-buttons,
+.stopwatch-buttons {
   display: flex;
   justify-content: center;
   gap: 5px;
