@@ -5,9 +5,9 @@ import { ReactComponent as PauseIMG } from '../IMG/pause_img.svg';
 import { ReactComponent as StopIMG } from '../IMG/stop_img.svg';
 
 export function Stopwatch() {
-  const [stopwatchHours, setStopwatchHours] = useState(23);
-  const [stopwatchMinutes, setStopwatchMinutes] = useState(59);
-  const [stopwatchSeconds, setStopwatchSeconds] = useState(58);
+  const [stopwatchHours, setStopwatchHours] = useState(0);
+  const [stopwatchMinutes, setStopwatchMinutes] = useState(0);
+  const [stopwatchSeconds, setStopwatchSeconds] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isStopped, setIsStopped] = useState(true);
