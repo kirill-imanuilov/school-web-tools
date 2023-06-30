@@ -9,7 +9,7 @@ export function CoffeeDeliveryForm() {
     const startTime = '8:00';
     const closingTime = '16:00';
     var time = '';
-    if (`${minutes}`.length == 1) {
+    if (`${minutes}`.length === 1) {
         time = `${hours}:0${minutes}`;
     } else {
         time = `${hours}:${minutes}`;
