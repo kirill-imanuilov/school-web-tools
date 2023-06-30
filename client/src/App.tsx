@@ -3,6 +3,7 @@ import './index.css';
 import { MainPage } from './components/pages/Main';
 import { DataSendingPage } from './components/pages/DataSending';
 import { TimePage } from './components/pages/Time'
+import { ClockPage } from './components/pages/Clock'
 import { TimerPage } from './components/pages/Timer'
 import { StopwatchPage } from './components/pages/Stopwatch'
 import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
@@ -19,6 +20,9 @@ function App() {
             <Route
                 path='/time/'
                 element={ <TimePage/> }/>
+            <Route
+                path='/time/clock/'
+                element={ <ClockPage/> }/>
             <Route
                 path='/time/timer/'
                 element={ <TimerPage/> }/>
