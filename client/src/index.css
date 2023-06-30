@@ -95,7 +95,8 @@ button:active {
 .done-img,
 .timer-button-img,
 .timer-arrow-img,
-.stopwatch-button-img {
+.stopwatch-button-img,
+.fullscreen-img {
   height: auto;
   width: auto;
 }
@@ -103,7 +104,8 @@ button:active {
 .content-copy-img,
 .done-img,
 .timer-button-img,
-.stopwatch-button-img {
+.stopwatch-button-img,
+.fullscreen-img {
   fill: #ffffff;
 }
 
@@ -198,7 +200,8 @@ input[type='checkbox']:checked {
 }
 
 .timer,
-.stopwatch {
+.stopwatch,
+.clock {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -206,26 +209,29 @@ input[type='checkbox']:checked {
 }
 
 .timer-values,
-.stopwatch-values {
+.stopwatch-values,
+.clock-values {
   display: flex;
   justify-content: center;
-  gap: 5px;
   font-size: 40px;
   border: 1px solid #cccccc;
   border-radius: 10px;
   width: fit-content;
   padding: 10px;
+  font-family: monospace;
 }
 
 .timer-button,
-.stopwatch-button {
+.stopwatch-button,
+.clock-button {
   display: flex;
   height: 50px;
   width: 50px;
 }
 
 .timer-buttons,
-.stopwatch-buttons {
+.stopwatch-buttons,
+.clock-buttons {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -264,4 +270,13 @@ input[type='checkbox']:checked {
 .timer-arrow-button:focus,
 .timer-arrow-button:active {
   background-color: transparent;
+}
+
+.clock-values.fullscreen-enabled {
+  align-items: center;
+  border: none;
+  border-radius: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  font-size: 18vw;
 }
