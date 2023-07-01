@@ -23,22 +23,33 @@ export function Clock() {
 
   return (
     <div className='clock'>
-      <FullScreen className='clock-values' handle={fullScreenHandle}>
-        <div>
-          {`${clockHours}`.length === 1 && 0}
-          {clockHours}
+      <div className='clock-values'>
+        <FullScreen className='clock-values-time' handle={fullScreenHandle}>
+          <div>
+            {`${clockHours}`.length === 1 && 0}
+            {clockHours}
+          </div>
+          :
+          <div>
+            {`${clockMinutes}`.length === 1 && 0}
+            {clockMinutes}
+          </div>
+          :
+          <div>
+            {`${clockSeconds}`.length === 1 && 0}
+            {clockSeconds}
+          </div>
+        </FullScreen>
+        <div className='clock-values-date'>
+          {`${date.getDate()}`.length === 1 && 0}
+          {date.getDate()}
+          .
+          {`${date.getMonth() + 1}`.length === 1 && 0}
+          {date.getMonth() + 1}
+          .
+          {date.getFullYear()}
         </div>
-        :
-        <div>
-          {`${clockMinutes}`.length === 1 && 0}
-          {clockMinutes}
-        </div>
-        :
-        <div>
-          {`${clockSeconds}`.length === 1 && 0}
-          {clockSeconds}
-        </div>
-      </FullScreen>
+      </div>
       <div className='clock-buttons'>
         <button className='clock-button' onClick={fullScreenHandle.enter}>
           <FullScreenIMG className='fullscreen-img' />

@@ -209,8 +209,7 @@ input[type='checkbox']:checked {
 }
 
 .timer-values,
-.stopwatch-values,
-.clock-values {
+.stopwatch-values {
   display: flex;
   justify-content: center;
   font-size: 40px;
@@ -272,11 +271,33 @@ input[type='checkbox']:checked {
   background-color: transparent;
 }
 
-.clock-values.fullscreen-enabled {
+.clock-values {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  border: none;
-  border-radius: 0px;
-  padding: 0px;
+  font-size: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.clock-values-time {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+}
+
+.clock-values-date {
+  display: flex;
+  width: fit-content;
+  font-size: 20px;
+}
+
+.clock-values-time.fullscreen-enabled {
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   font-size: 18vw;
 }
