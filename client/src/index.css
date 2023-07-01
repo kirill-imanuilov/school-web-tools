@@ -237,14 +237,14 @@ input[type='checkbox']:checked {
   margin-bottom: 10px;
 }
 
-.set-time {
+.set-timer-time {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5px;
 }
 
-.set-time-item {
+.set-timer-time-item {
   display: flex;
   flex-direction: column;
   justify-content: center;

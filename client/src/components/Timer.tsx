@@ -114,8 +114,8 @@ export function Timer() {
   return (
     <div className='timer'>
       {(isPaused || isStopped) && (
-        <div className='set-time'>
-          <div className='set-time-item set-hours'>
+        <div className='set-timer-time'>
+          <div className='set-timer-time-item'>
             <button className='timer-arrow-button' onClick={increaseTimerHours}>
               <ArrowUpIMG className='timer-arrow-img' />
             </button>
@@ -124,7 +124,7 @@ export function Timer() {
               <ArrowDownIMG className='timer-arrow-img' />
             </button>
           </div>
-          <div className='set-time-item set-minutes'>
+          <div className='set-timer-time-item'>
             <button
               className='timer-arrow-button'
               onClick={increaseTimerMinutes}
@@ -139,7 +139,7 @@ export function Timer() {
               <ArrowDownIMG className='timer-arrow-img' />
             </button>
           </div>
-          <div className='set-time-item set-seconds'>
+          <div className='set-timer-time-item'>
             <button
               className='timer-arrow-button'
               onClick={increaseTimerSeconds}
