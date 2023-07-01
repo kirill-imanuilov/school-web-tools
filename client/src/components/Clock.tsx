@@ -42,12 +42,8 @@ export function Clock() {
         </FullScreen>
         <div className='clock-values-date'>
           {`${date.getDate()}`.length === 1 && 0}
-          {date.getDate()}
-          .
-          {`${date.getMonth() + 1}`.length === 1 && 0}
-          {date.getMonth() + 1}
-          .
-          {date.getFullYear()}
+          {date.getDate()}.{`${date.getMonth() + 1}`.length === 1 && 0}
+          {date.getMonth() + 1}.{date.getFullYear()}
         </div>
       </div>
       <div className='clock-buttons'>
