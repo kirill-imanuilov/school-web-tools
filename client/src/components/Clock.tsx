@@ -2,8 +2,20 @@ import { useState, useEffect } from 'react';
 import '../index.css';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 import { ReactComponent as FullScreenIMG } from '../IMG/fullscreen_img.svg';
+import { ReactComponent as DarkModeIMG } from '../IMG/dark_mode_img.svg';
+import { ReactComponent as LightModeIMG } from '../IMG/light_mode_img.svg';
 
 export function Clock() {
+  const [mode, setMode] = useState('light');
+
+  const handleModeButtonClick = () => {
+    if (mode === 'dark') {
+      setMode('light');
+    } else if (mode === 'light') {
+      setMode('dark');
+    }
+  };
+
   const fullScreenHandle = useFullScreenHandle();
 
   const [date, setDate] = useState(new Date());
@@ -23,8 +35,11 @@ export function Clock() {
 
   return (
     <div className='clock'>
-      <div className='clock-values'>
-        <FullScreen className='clock-values-time' handle={fullScreenHandle}>
+      <div className={`clock-values clock-values-${mode}`}>
+        <FullScreen
+          className={`clock-values-time clock-values-time-${mode}`}
+          handle={fullScreenHandle}
+        >
           <div>
             {`${clockHours}`.length === 1 && 0}
             {clockHours}
@@ -49,6 +64,10 @@ export function Clock() {
       <div className='clock-buttons'>
         <button className='clock-button' onClick={fullScreenHandle.enter}>
           <FullScreenIMG className='fullscreen-img' />
+        </button>
+        <button className='clock-button' onClick={handleModeButtonClick}>
+          {mode === 'light' && <DarkModeIMG className='dark-mode-img' />}
+          {mode === 'dark' && <LightModeIMG className='light-mode-img' />}
         </button>
       </div>
     </div>

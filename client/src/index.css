@@ -96,7 +96,9 @@ button:active {
 .timer-button-img,
 .timer-arrow-img,
 .stopwatch-button-img,
-.fullscreen-img {
+.fullscreen-img,
+.dark-mode-img,
+.light-mode-img {
   height: auto;
   width: auto;
 }
@@ -105,7 +107,9 @@ button:active {
 .done-img,
 .timer-button-img,
 .stopwatch-button-img,
-.fullscreen-img {
+.fullscreen-img,
+.dark-mode-img,
+.light-mode-img {
   fill: #ffffff;
 }
 
@@ -283,6 +287,16 @@ input[type='checkbox']:checked {
   font-family: monospace;
 }
 
+.clock-values-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.clock-values-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .clock-values-time {
   display: flex;
   width: fit-content;
@@ -300,4 +314,14 @@ input[type='checkbox']:checked {
   align-items: center;
   background-color: #ffffff;
   font-size: 18vw;
+}
+
+.clock-values-time-light.fullscreen-enabled {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.clock-values-time-dark.fullscreen-enabled {
+  background-color: #000000;
+  color: #ffffff;
 }
