@@ -1,5 +1,4 @@
 export interface UsefulMaterialsInterface {
-    name: string
-    url: string
+  name: string;
+  url: string;
 }
-
