@@ -23,3 +23,5 @@
 */yarn-error.log*
 
 */env-school-web-tools/
+*/__pycache__/
+db.sqlite3
