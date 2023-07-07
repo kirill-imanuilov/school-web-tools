@@ -1,5 +1,6 @@
 import '../index.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface orderData {
   deliveryTime: string;
@@ -23,7 +24,7 @@ export function CoffeeDeliveryForm() {
   const hours = parseInt(`${allMinutes / 60}`);
   const minutes = allMinutes % 60;
   const startTime = '8:00';
-  const closingTime = '16:00';
+  const closingTime = '26:00';
   var time = '';
 
   if (`${hours}`.length === 1 && `${minutes}`.length === 1) {
@@ -63,19 +64,22 @@ export function CoffeeDeliveryForm() {
   };
 
   async function postOrderData(orderData: orderData) {
-    let maxId;
-    await fetch('http://localhost:8000/coffee_delivery/save_order_data/', {
+    let id: number;
+    return await fetch('http://localhost:8000/coffee_delivery/save_order_data/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(orderData),
     })
       .then((response) => response.json())
-      .then((response) => (maxId = response.max_id));
+      .then((response) => (id = response.max_id))
+      .then(() => {return id});
   }
+
+  const navigate = useNavigate();
 
   const handleSubmitButtonClick = (event: any) => {
     event.preventDefault();
-    postOrderData(orderData);
+    postOrderData(orderData).then((n) => navigate(`order_tracking/${n}`));
   };
 
   return (
