@@ -191,6 +191,33 @@ input[type='checkbox']:checked {
   cursor: pointer;
 }
 
+.coffee-delivery-order-tracking-order-top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.coffee-delivery-order-tracking-order-status-wait {
+  color: red;
+}
+
+.coffee-delivery-order-tracking-order-status-ready {
+  color: green;
+}
+
+.coffee-delivery-order-tracking-order-details {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .submit-button-disabled {
   background-color: #005dff;
   cursor: not-allowed;

@@ -93,3 +93,27 @@ async def save_order_data(order_data: OrderData):
 
     return {"max_id": max_id}
 
+
+@app.get("/coffee_delivery/get_order_data/{order_id}")
+async def get_order_data(order_id: int):
+    with connection:
+        cursor = connection.cursor()
+        data = cursor.execute(f"""SELECT * FROM coffeeDeliveryOrdersData WHERE id = {order_id}""").fetchone()
+        return {
+                "id": data[0],
+                "date": data[1],
+                "orderTime": data[2],
+                "deliveryTime": data[3],
+                "isCourierSent": data[4],
+                "name": data[5],
+                "office": data[6],
+                "building": data[7],
+                "coffee": data[8],
+                "cinnamon": data[9],
+                "lemon": data[10],
+                "sugar": data[11],
+                "cream": data[12],
+                "syrop": data[13],
+                "addition": data[14]
+                }
+

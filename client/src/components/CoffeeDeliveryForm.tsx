@@ -65,14 +65,19 @@ export function CoffeeDeliveryForm() {
 
   async function postOrderData(orderData: orderData) {
     let id: number;
-    return await fetch('http://localhost:8000/coffee_delivery/save_order_data/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(orderData),
-    })
+    return await fetch(
+      'http://localhost:8000/coffee_delivery/save_order_data/',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData),
+      }
+    )
       .then((response) => response.json())
       .then((response) => (id = response.max_id))
-      .then(() => {return id});
+      .then(() => {
+        return id;
+      });
   }
 
   const navigate = useNavigate();
@@ -86,7 +91,7 @@ export function CoffeeDeliveryForm() {
     <form className='coffee-delivery-form'>
       <input
         className='coffee-delivery-form-input coffee-delivery-form-input-name'
-        placeholder='ФИО'
+        placeholder='Как Вас зовут?'
         value={name}
         onChange={(event) => setName(event.target.value)}
         required
