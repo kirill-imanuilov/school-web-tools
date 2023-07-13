@@ -10,6 +10,7 @@ import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
 import { ForTeachersPage } from './components/pages/ForTeachers';
 import { CoffeeDeliveryPage } from './components/pages/CoffeeDelivery';
 import { OrderTrackingPage } from './components/pages/OrderTracking';
+import { CoffeeDeliveryStaffPage } from './components/pages/CoffeeDeliveryStaff';
 import { AboutPage } from './components/pages/About';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
             <Route
                 path='/useful_materials/'
                 element={ <UsefulMaterialsPage/> }/>
+            <Route
+                path='/for_teachers/coffee_delivery/staff/'
+                element={ <CoffeeDeliveryStaffPage/> }/>
             <Route
               path='/for_teachers/coffee_delivery/order_tracking/:id'
                 element={ <OrderTrackingPage/> }/>

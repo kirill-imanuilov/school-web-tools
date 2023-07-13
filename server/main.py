@@ -117,3 +117,37 @@ async def get_order_data(order_id: int):
                 "addition": data[14]
                 }
 
+@app.get("/coffee_delivery/staff/get_orders_data/not_done")
+async def get_orders_data_not_done():
+    with connection:
+        cursor = connection.cursor()
+        data = cursor.execute("""SELECT * FROM coffeeDeliveryOrdersData WHERE isCourierSent = 0 ORDER BY deliveryTime""").fetchall()
+        a = []
+        for elem in data:
+            a.append({
+                "id": elem[0],
+                "date": elem[1],
+                "orderTime": elem[2],
+                "deliveryTime": elem[3],
+                "isCourierSent": elem[4],
+                "name": elem[5],
+                "office": elem[6],
+                "building": elem[7],
+                "coffee": elem[8],
+                "cinnamon": elem[9],
+                "lemon": elem[10],
+                "sugar": elem[11],
+                "cream": elem[12],
+                "syrop": elem[13],
+                "addition": elem[14]
+                })
+        return a
+
+
+@app.get("/coffee_delivery/staff/courier_sent/{order_id}")
+async def courier_sent(order_id: int):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""UPDATE coffeeDeliveryOrdersData SET isCourierSent = 1 WHERE id = ?;""", (str(order_id),))
+    return {"message": "success"}
+

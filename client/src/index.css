@@ -210,12 +210,28 @@ input[type='checkbox']:checked {
   color: green;
 }
 
-.coffee-delivery-order-tracking-order-details {
+.coffee-delivery-order-tracking-order-details,
+.coffee-delivery-staff-order {
   display: flex;
   justify-content: center;
   border: 1px solid #cccccc;
   border-radius: 10px;
   padding: 10px;
+}
+
+.coffee-delivery-staff-order {
+  flex-wrap: wrap;
+}
+
+.coffee-delivery-staff-order-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.coffee-delivery-staff-order-content {
+  width: 100%;
 }
 
 .submit-button-disabled {
