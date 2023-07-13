@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
 
-export function AboutPage() {
+export function FeedbackPage() {
   return (
     <div className='page'>
       <div className='container'>
-        <h1 className='container-title'>О сайте</h1>
+        <h1 className='container-title'>Обратная связь</h1>
         <div className='container-content'>
-          <Link to='feedback/' className='button-link'>
-            <button>Обратная связь</button>
-          </Link>
-          <Link to='/' className='button-link'>
+          <Link to='/about/' className='button-link'>
             <button>Назад</button>
           </Link>
         </div>
@@ -18,3 +15,4 @@ export function AboutPage() {
     </div>
   );
 }
+

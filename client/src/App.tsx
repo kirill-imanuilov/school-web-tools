@@ -12,6 +12,7 @@ import { CoffeeDeliveryPage } from './components/pages/CoffeeDelivery';
 import { OrderTrackingPage } from './components/pages/OrderTracking';
 import { CoffeeDeliveryStaffPage } from './components/pages/CoffeeDeliveryStaff';
 import { AboutPage } from './components/pages/About';
+import { FeedbackPage } from './components/pages/Feedback';
 
 function App() {
     return (
@@ -46,6 +47,9 @@ function App() {
             <Route
                 path='/for_teachers/'
                 element={ <ForTeachersPage/> }/>
+            <Route
+                path='/about/feedback/'
+                element={ <FeedbackPage/> }/>
             <Route
                 path='/about/'
                 element={ <AboutPage/> }/>
