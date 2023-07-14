@@ -57,14 +57,16 @@ button:active {
   gap: 5px;
 }
 
-.data-sending-form {
+.data-sending-form,
+.feedback-form {
   display: grid;
   grid-template-rows: 50px 150px 50px;
   gap: 5px;
 }
 
 .data-sending-form-item,
-.coffee-delivery-form-input {
+.coffee-delivery-form-input,
+.feedback-form-input {
   border-radius: 10px;
   border: 1px solid #cccccc;
   padding: 10px;
@@ -75,7 +77,8 @@ button:active {
   width: calc(100% - 21.6px);
 }
 
-.data-sending-form-input-message {
+.data-sending-form-input-message,
+.feedback-form-input-message {
   overflow: hidden;
   resize: none;
 }
