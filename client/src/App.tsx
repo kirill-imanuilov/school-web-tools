@@ -14,10 +14,15 @@ import { CoffeeDeliveryStaffPage } from './components/pages/CoffeeDeliveryStaff'
 import { AboutPage } from './components/pages/About';
 import { FeedbackPage } from './components/pages/Feedback';
 import { StaffPage } from './components/pages/Staff';
+import { FeedbackStaffPage } from './components/pages/FeedbackStaff';
 
 function App() {
   return (
     <Routes>
+      <Route
+        path='/staff/feedback/'
+        element={<FeedbackStaffPage />}
+      />
       <Route path='/staff/' element={<StaffPage />} />
       <Route
         path='/staff/coffee_delivery/'

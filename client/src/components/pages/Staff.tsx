@@ -10,6 +10,9 @@ export function StaffPage() {
           <Link to='coffee_delivery/' className='button-link'>
             <button>Заказы (доставка кофе)</button>
           </Link>
+          <Link to='feedback/' className='button-link'>
+            <button>Обращения (обратная связь)</button>
+          </Link>
         </div>
       </div>
     </div>
