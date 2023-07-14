@@ -19,6 +19,10 @@ function App() {
   return (
     <Routes>
       <Route path='/staff/' element={<StaffPage />} />
+      <Route
+        path='/staff/coffee_delivery/'
+        element={<CoffeeDeliveryStaffPage />}
+      />
 
       <Route path='/data_sending/' element={<DataSendingPage />} />
       <Route path='/time/' element={<TimePage />} />
@@ -26,10 +30,6 @@ function App() {
       <Route path='/time/timer/' element={<TimerPage />} />
       <Route path='/time/stopwatch/' element={<StopwatchPage />} />
       <Route path='/useful_materials/' element={<UsefulMaterialsPage />} />
-      <Route
-        path='/for_teachers/coffee_delivery/staff/'
-        element={<CoffeeDeliveryStaffPage />}
-      />
       <Route
         path='/for_teachers/coffee_delivery/order_tracking/:id'
         element={<OrderTrackingPage />}

@@ -6,7 +6,11 @@ export function StaffPage() {
     <div className='page'>
       <div className='container'>
         <h1 className='container-title'>Для персонала</h1>
-        <div className='container-content'></div>
+        <div className='container-content'>
+          <Link to='coffee_delivery/' className='button-link'>
+            <button>Заказы (доставка кофе)</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
