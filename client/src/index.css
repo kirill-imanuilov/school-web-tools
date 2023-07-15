@@ -101,7 +101,8 @@ button:active {
 .stopwatch-button-img,
 .fullscreen-img,
 .dark-mode-img,
-.light-mode-img {
+.light-mode-img,
+.email-img {
   height: auto;
   width: auto;
 }
@@ -112,11 +113,13 @@ button:active {
 .stopwatch-button-img,
 .fullscreen-img,
 .dark-mode-img,
-.light-mode-img {
+.light-mode-img,
+.email-img {
   fill: #ffffff;
 }
 
-.data-sending-form-bottom-container {
+.data-sending-form-bottom-container,
+.feedback-staff-feedback-bottom-container {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -214,7 +217,8 @@ input[type='checkbox']:checked {
 }
 
 .coffee-delivery-order-tracking-order-details,
-.coffee-delivery-staff-order {
+.coffee-delivery-staff-order,
+.feedback-staff-feedback {
   display: flex;
   justify-content: center;
   border: 1px solid #cccccc;
@@ -222,18 +226,21 @@ input[type='checkbox']:checked {
   padding: 10px;
 }
 
-.coffee-delivery-staff-order {
+.coffee-delivery-staff-order,
+.feedback-staff-feedback {
   flex-wrap: wrap;
 }
 
-.coffee-delivery-staff-order-title {
+.coffee-delivery-staff-order-title,
+.feedback-staff-feedback-title {
   display: flex;
   width: 100%;
   justify-content: center;
   font-weight: bold;
 }
 
-.coffee-delivery-staff-order-content {
+.coffee-delivery-staff-order-content,
+.feedback-staff-feedback-content {
   width: 100%;
 }
 
@@ -370,4 +377,16 @@ input[type='checkbox']:checked {
 .clock-values-time-dark.fullscreen-enabled {
   background-color: #000000;
   color: #ffffff;
+}
+
+.feedback-staff-feedback-email-button,
+.feedback-staff-feedback-issue-solved-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.feedback-staff-feedback-email-button-link {
+  width: 100%;
 }

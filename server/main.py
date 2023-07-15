@@ -104,7 +104,6 @@ async def save_order_data(order_data: OrderData):
                              order_data.syrop,
                              order_data.addition))
         max_id = cursor.execute("""SELECT MAX(id) FROM coffeeDeliveryOrdersData;""").fetchone()[0]
-
     return {"max_id": max_id}
 
 
@@ -130,6 +129,7 @@ async def get_order_data(order_id: int):
                 "syrop": data[13],
                 "addition": data[14]
                 }
+
 
 @app.get("/coffee_delivery/staff/get_orders_data/not_done")
 async def get_orders_data_not_done():
@@ -182,3 +182,28 @@ async def save_feedback_data(feedbackData: FeedbackData):
                              feedbackData.userEmail,
                              feedbackData.userMessage))
 
+
+@app.get("/feedback/staff/get_feedbacks_data/not_solved")
+async def get_feedbacks_data_not_solved():
+    with connection:
+        cursor = connection.cursor()
+        data = cursor.execute("""SELECT * FROM feedbacksData WHERE isIssueSolved = 0""").fetchall()
+        a = []
+        for elem in data:
+            a.append({
+                "id": elem[0],
+                "date": elem[1],
+                "feedbackTime": elem[2],
+                "isIssueSolved": elem[3],
+                "userEmail": elem[4],
+                "userMessage": elem[5],
+                })
+        return a
+
+
+@app.get("/feedback/staff/issue_solved/{issue_id}")
+async def issue_solved(issue_id: int):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""UPDATE feedbacksData SET isIssueSolved = 1 WHERE id = ?;""", (str(issue_id),))
+    return {"message": "success"}
