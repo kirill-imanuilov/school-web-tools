@@ -1,11 +1,31 @@
 import '../index.css';
 import { useState } from 'react';
 
+interface feedbackData {
+  userEmail: string;
+  userMessage: string;
+}
+
 export function FeedbackForm() {
   const [userEmail, setUserEmail] = useState('');
   const [userMessage, setUserMessage] = useState('');
 
-  const handleSubmitButtonClick = () => {};
+  const handleSubmitButtonClick = () => {
+    postFeedbackData(feedbackData);
+  };
+
+  async function postFeedbackData(feedbackData: feedbackData) {
+    return await fetch('http://localhost:8000/feedback/save_feedback_data/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(feedbackData),
+    });
+  }
+
+  const feedbackData = {
+    userEmail: userEmail,
+    userMessage: userMessage,
+  };
 
   return (
     <div className='feedback-form'>

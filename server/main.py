@@ -34,6 +34,11 @@ class OrderData(BaseModel):
     addition: str
 
 
+class FeedbackData(BaseModel):
+    userEmail: str
+    userMessage: str
+
+
 with connection:
     cursor = connection.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS coffeeDeliveryOrdersData (
@@ -52,6 +57,15 @@ with connection:
                           cream INTEGER NOT NULL,
                           syrop TEXT NOT NULL,
                           addition TEXT NOT NULL
+                      );
+                   """)
+    cursor.execute("""CREATE TABLE IF NOT EXISTS feedbacksData (
+                          id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                          date TEXT NOT NULL,
+                          feedbackTime TEXT NOT NULL,
+                          isIssueSolved INTEGER NOT NULL,
+                          userEmail TEXT NOT NULL,
+                          userMessage TEXT NOT NULL
                       );
                    """)
 
@@ -150,4 +164,21 @@ async def courier_sent(order_id: int):
         cursor = connection.cursor()
         cursor.execute("""UPDATE coffeeDeliveryOrdersData SET isCourierSent = 1 WHERE id = ?;""", (str(order_id),))
     return {"message": "success"}
+
+
+@app.post("/feedback/save_feedback_data/")
+async def save_feedback_data(feedbackData: FeedbackData):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""INSERT INTO feedbacksData (date,
+                                                     feedbackTime,
+                                                     isIssueSolved,
+                                                     userEmail,
+                                                     userMessage)
+                          VALUES (?, ?, ?, ?, ?);
+                       """, (str(datetime.date.today()),
+                             str(datetime.datetime.now().time())[0:8],
+                             0,
+                             feedbackData.userEmail,
+                             feedbackData.userMessage))
 
