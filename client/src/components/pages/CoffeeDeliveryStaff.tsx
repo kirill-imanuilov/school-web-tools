@@ -1,6 +1,6 @@
 import '../../index.css';
-import {useState, useEffect} from 'react';
-import {CoffeeDeliveryStaffOrder} from '../CoffeeDeliveryStaffOrder';
+import { useState, useEffect } from 'react';
+import { CoffeeDeliveryStaffOrder } from '../CoffeeDeliveryStaffOrder';
 
 export function CoffeeDeliveryStaffPage() {
   const [data, setData] = useState([]);
@@ -27,10 +27,11 @@ export function CoffeeDeliveryStaffPage() {
       <div className='container'>
         <h1 className='container-title'>Заказы</h1>
         <div className='container-content'>
-          {data.map((orderData, index) => <CoffeeDeliveryStaffOrder orderData={orderData} key={index}/>)}
+          {data.map((orderData, index) => (
+            <CoffeeDeliveryStaffOrder orderData={orderData} key={index} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
-

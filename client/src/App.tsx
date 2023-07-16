@@ -20,14 +20,11 @@ function App() {
   return (
     <Routes>
       <Route
-        path='/staff/feedback/'
-        element={<FeedbackStaffPage />}
-      />
-      <Route path='/staff/' element={<StaffPage />} />
-      <Route
         path='/staff/coffee_delivery/'
         element={<CoffeeDeliveryStaffPage />}
       />
+      <Route path='/staff/feedback/' element={<FeedbackStaffPage />} />
+      <Route path='/staff/' element={<StaffPage />} />
 
       <Route path='/data_sending/' element={<DataSendingPage />} />
       <Route path='/time/' element={<TimePage />} />
