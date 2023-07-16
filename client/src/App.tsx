@@ -8,6 +8,7 @@ import { TimerPage } from './components/pages/Timer';
 import { StopwatchPage } from './components/pages/Stopwatch';
 import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
 import { UsefulMaterialsLearningSitesPage } from './components/pages/UsefulMaterialsLearningSites';
+import { UsefulMaterialsSchoolBellSchedulePage } from './components/pages/UsefulMaterialsSchoolBellSchedule';
 import { ForTeachersPage } from './components/pages/ForTeachers';
 import { CoffeeDeliveryPage } from './components/pages/CoffeeDelivery';
 import { OrderTrackingPage } from './components/pages/OrderTracking';
@@ -35,6 +36,10 @@ function App() {
       <Route
         path='/useful_materials/learning_sites'
         element={<UsefulMaterialsLearningSitesPage />}
+      />
+      <Route
+        path='/useful_materials/school_bell_schedule'
+        element={<UsefulMaterialsSchoolBellSchedulePage />}
       />
       <Route path='/useful_materials/' element={<UsefulMaterialsPage />} />
       <Route

@@ -10,6 +10,9 @@ export function UsefulMaterialsPage() {
           <Link to='learning_sites/' className='button-link'>
             <button>Учебные сайты</button>
           </Link>
+          <Link to='school_bell_schedule/' className='button-link'>
+            <button>Расписание звонков</button>
+          </Link>
           <Link to='/' className='button-link'>
             <button>Назад</button>
           </Link>
