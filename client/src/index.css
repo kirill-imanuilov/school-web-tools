@@ -145,6 +145,31 @@ button:active {
   margin-left: auto;
 }
 
+.useful-materials-school-bell-schedule-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.useful-materials-school-bell-schedule-table {
+  border-collapse: collapse;
+  width: fit-content;
+}
+
+.useful-materials-school-bell-schedule-th {
+  border: 1px solid #cccccc;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.useful-materials-school-bell-schedule-td {
+  border: 1px solid #cccccc;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
 .coffee-delivery-form {
   display: flex;
   flex-direction: column;
