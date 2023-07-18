@@ -16,6 +16,9 @@ export function MainPage() {
           <Link to='useful_materials' className='button-link'>
             <button>Полезные материалы</button>
           </Link>
+          <Link to='lost_things' className='button-link'>
+            <button>Потерянные вещи</button>
+          </Link>
           <Link to='for_teachers' className='button-link'>
             <button>Для учителей</button>
           </Link>
