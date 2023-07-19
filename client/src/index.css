@@ -64,30 +64,41 @@ button:active {
   gap: 5px;
 }
 
+.lost-things-form {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 150px;
+  gap: 5px;
+}
+
 .data-sending-form-item,
 .coffee-delivery-form-input,
-.feedback-form-input {
+.feedback-form-input,
+.lost-things-form-item {
   border-radius: 10px;
   border: 1px solid #cccccc;
   padding: 10px;
   font-size: 20px;
 }
 
-.data-sending-form-item {
+.data-sending-form-item,
+.lost-things-form-item {
   width: calc(100% - 21.6px);
 }
 
 .data-sending-form-input-message,
-.feedback-form-input-message {
+.feedback-form-input-message,
+.lost-things-form-input-message {
   overflow: hidden;
   resize: none;
 }
 
-.data-sending-form-input-file {
+.data-sending-form-input-file,
+.lost-things-form-input-file {
   display: none;
 }
 
-.data-sending-form-input-file-label {
+.data-sending-form-input-file-label,
+.lost-things-form-input-file-label {
   display: flex;
   cursor: pointer;
   width: auto;
@@ -102,7 +113,9 @@ button:active {
 .fullscreen-img,
 .dark-mode-img,
 .light-mode-img,
-.email-img {
+.email-img,
+.add-img,
+.send-img {
   height: auto;
   width: auto;
 }
@@ -114,7 +127,9 @@ button:active {
 .fullscreen-img,
 .dark-mode-img,
 .light-mode-img,
-.email-img {
+.email-img,
+.add-img,
+.send-img {
   fill: #ffffff;
 }
 
@@ -414,4 +429,25 @@ input[type='checkbox']:checked {
 
 .feedback-staff-feedback-email-button-link {
   width: 100%;
+}
+
+.lost-things-add-button,
+.lost-things-send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lost-things-form-top-container {
+  display: flex;
+  gap: 5px;
+}
+
+.lost-things-form-loaded-thing-img {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.lost-things-form-loaded-thing-img-container {
+  display: flex;
 }
