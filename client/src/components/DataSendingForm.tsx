@@ -1,7 +1,9 @@
 import '../index.css';
-import { ReactComponent as AttachFileIMG } from '../IMG/attach_file_img.svg';
+import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 
 export function DataSendingForm() {
+  const handleAttachFileChange = () => {};
+
   return (
     <div className='data-sending-form'>
       <input
@@ -14,10 +16,7 @@ export function DataSendingForm() {
         className='data-sending-form-item data-sending-form-input-message'
       />
       <div className='data-sending-form-bottom-container'>
-        <label className='data-sending-form-item data-sending-form-input-file-label'>
-          <AttachFileIMG className='attach-file-img' />
-          <input type='file' className='data-sending-form-input-file' />
-        </label>
+        <AttachFileSquareButton onChange={handleAttachFileChange} />
         <button type='submit'>Отправить</button>
       </div>
     </div>

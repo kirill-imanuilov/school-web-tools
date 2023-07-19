@@ -1,7 +1,7 @@
 import '../index.css';
 import { ReactComponent as AddIMG } from '../IMG/add_img.svg';
 import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
-import { ReactComponent as AttachFileIMG } from '../IMG/attach_file_img.svg';
+import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState } from 'react';
 
 export function LostThings() {
@@ -78,14 +78,7 @@ export function LostThings() {
               value={thingName}
               onChange={(event) => setThingName(event.target.value)}
             />
-            <label className='lost-things-form-item lost-things-form-input-file-label'>
-              <AttachFileIMG className='attach-file-img' />
-              <input
-                type='file'
-                className='lost-things-form-input-file'
-                onChange={handleAttachThingIMGChange}
-              />
-            </label>
+            <AttachFileSquareButton onChange={handleAttachThingIMGChange} />
           </div>
           <input
             className='lost-things-form-item'

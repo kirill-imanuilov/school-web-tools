@@ -70,6 +70,7 @@ button:active {
   gap: 5px;
 }
 
+.attach-file-square-button,
 .data-sending-form-item,
 .coffee-delivery-form-input,
 .feedback-form-input,
@@ -92,13 +93,11 @@ button:active {
   resize: none;
 }
 
-.data-sending-form-input-file,
-.lost-things-form-input-file {
+input[type='file'] {
   display: none;
 }
 
-.data-sending-form-input-file-label,
-.lost-things-form-input-file-label {
+.attach-file-square-button {
   display: flex;
   cursor: pointer;
   width: auto;
