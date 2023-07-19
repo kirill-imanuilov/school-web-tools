@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import '../../index.css';
 import { useState, useEffect } from 'react';
+import { BackButton } from '../buttons/BackButton';
 
 export function OrderTrackingPage() {
   const { id } = useParams();
@@ -128,9 +129,7 @@ export function OrderTrackingPage() {
               </ul>
             </details>
           </div>
-          <Link to='/for_teachers/coffee_delivery/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

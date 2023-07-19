@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import { BackButton } from '../buttons/BackButton';
 
 export function ForTeachersPage() {
   return (
@@ -10,9 +11,7 @@ export function ForTeachersPage() {
           <Link to='coffee_delivery/' className='button-link'>
             <button>Доставка кофе</button>
           </Link>
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

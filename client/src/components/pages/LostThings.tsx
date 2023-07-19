@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
 import { LostThings } from '../LostThings';
+import { BackButton } from '../buttons/BackButton';
 
 export function LostThingsPage() {
   return (
@@ -9,9 +10,7 @@ export function LostThingsPage() {
         <h1 className='container-title'>Потерянные вещи</h1>
         <div className='container-content'>
           <LostThings />
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

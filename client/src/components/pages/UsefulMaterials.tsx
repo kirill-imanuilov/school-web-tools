@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import { BackButton } from '../buttons/BackButton';
 
 export function UsefulMaterialsPage() {
   return (
@@ -13,9 +14,7 @@ export function UsefulMaterialsPage() {
           <Link to='school_bell_schedule/' className='button-link'>
             <button>Расписание звонков</button>
           </Link>
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import { BackButton } from '../buttons/BackButton';
 
 export function AboutPage() {
   return (
@@ -10,9 +11,7 @@ export function AboutPage() {
           <Link to='feedback/' className='button-link'>
             <button>Обратная связь</button>
           </Link>
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

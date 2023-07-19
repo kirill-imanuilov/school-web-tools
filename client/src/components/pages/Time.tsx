@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import { BackButton } from '../buttons/BackButton';
 
 export function TimePage() {
   return (
@@ -16,9 +17,7 @@ export function TimePage() {
           <Link to='stopwatch/' className='button-link'>
             <button>Секундомер</button>
           </Link>
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>

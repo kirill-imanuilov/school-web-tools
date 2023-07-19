@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../index.css';
 import { DataSendingForm } from '../DataSendingForm';
+import { BackButton } from '../buttons/BackButton';
 
 export function DataSendingPage() {
   return (
@@ -9,9 +10,7 @@ export function DataSendingPage() {
         <h1 className='container-title'>Отправка данных</h1>
         <div className='container-content'>
           <DataSendingForm />
-          <Link to='/' className='button-link'>
-            <button>Назад</button>
-          </Link>
+          <BackButton />
         </div>
       </div>
     </div>
