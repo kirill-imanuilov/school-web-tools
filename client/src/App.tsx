@@ -10,6 +10,7 @@ import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
 import { UsefulMaterialsLearningSitesPage } from './components/pages/UsefulMaterialsLearningSites';
 import { UsefulMaterialsSchoolBellSchedulePage } from './components/pages/UsefulMaterialsSchoolBellSchedule';
 import { LostThingsPage } from './components/pages/LostThings';
+import { LostThingsFoundPage } from './components/pages/LostThingsFound';
 import { ForTeachersPage } from './components/pages/ForTeachers';
 import { CoffeeDeliveryPage } from './components/pages/CoffeeDelivery';
 import { OrderTrackingPage } from './components/pages/OrderTracking';
@@ -43,6 +44,7 @@ function App() {
         element={<UsefulMaterialsSchoolBellSchedulePage />}
       />
       <Route path='/useful_materials/' element={<UsefulMaterialsPage />} />
+      <Route path='/lost_things/found/' element={<LostThingsFoundPage />} />
       <Route path='/lost_things/' element={<LostThingsPage />} />
       <Route
         path='/for_teachers/coffee_delivery/order_tracking/:id'

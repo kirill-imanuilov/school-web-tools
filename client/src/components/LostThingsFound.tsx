@@ -4,7 +4,7 @@ import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
 import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState } from 'react';
 
-export function LostThings() {
+export function LostThingsFound() {
   const [isAdding, setIsAdding] = useState(false);
 
   const [thingName, setThingName] = useState('');
