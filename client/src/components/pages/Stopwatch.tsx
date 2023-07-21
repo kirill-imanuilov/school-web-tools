@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
 import { Stopwatch } from '../Stopwatch';
 import { BackButton } from '../buttons/BackButton';

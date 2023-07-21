@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../../index.css';
 import { useState, useEffect } from 'react';
 import { BackButton } from '../buttons/BackButton';

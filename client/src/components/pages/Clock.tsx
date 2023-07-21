@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
 import { Clock } from '../Clock';
 import { BackButton } from '../buttons/BackButton';
