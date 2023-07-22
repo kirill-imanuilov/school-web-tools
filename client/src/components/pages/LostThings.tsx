@@ -11,6 +11,9 @@ export function LostThingsPage() {
           <Link to='found/' className='button-link'>
             <button>Я нашёл вещь</button>
           </Link>
+          <Link to='lost/' className='button-link'>
+            <button>Я потерял вещь</button>
+          </Link>
           <BackButton />
         </div>
       </div>
