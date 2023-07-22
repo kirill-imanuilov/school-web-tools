@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
+import { ButtonLink } from '../buttons/ButtonLink';
 
 export function MainPage() {
   return (
@@ -7,24 +7,12 @@ export function MainPage() {
       <div className='container'>
         <h1 className='container-title'>School Web Tools</h1>
         <div className='container-content'>
-          <Link to='data_sending' className='button-link'>
-            <button>Отправка данных</button>
-          </Link>
-          <Link to='time' className='button-link'>
-            <button>Время</button>
-          </Link>
-          <Link to='useful_materials' className='button-link'>
-            <button>Полезные материалы</button>
-          </Link>
-          <Link to='lost_things' className='button-link'>
-            <button>Потерянные вещи</button>
-          </Link>
-          <Link to='for_teachers' className='button-link'>
-            <button>Для учителей</button>
-          </Link>
-          <Link to='about' className='button-link'>
-            <button>О сайте</button>
-          </Link>
+          <ButtonLink to='data_sending' buttonName='Отправка данных' />
+          <ButtonLink to='time' buttonName='Время' />
+          <ButtonLink to='useful_materials' buttonName='Полезные материалы' />
+          <ButtonLink to='lost_things' buttonName='Потерянные вещи' />
+          <ButtonLink to='for_teachers' buttonName='Для учителей' />
+          <ButtonLink to='about' buttonName='О сайте' />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
 import { BackButton } from '../buttons/BackButton';
+import { ButtonLink } from '../buttons/ButtonLink';
 
 export function LostThingsPage() {
   return (
@@ -8,12 +8,8 @@ export function LostThingsPage() {
       <div className='container'>
         <h1 className='container-title'>Потерянные вещи</h1>
         <div className='container-content'>
-          <Link to='found/' className='button-link'>
-            <button>Я нашёл вещь</button>
-          </Link>
-          <Link to='lost/' className='button-link'>
-            <button>Я потерял вещь</button>
-          </Link>
+          <ButtonLink to='found/' buttonName='Я нашёл вещь' />
+          <ButtonLink to='lost/' buttonName='Я потерял вещь' />
           <BackButton />
         </div>
       </div>

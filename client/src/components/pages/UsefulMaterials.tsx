@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
 import { BackButton } from '../buttons/BackButton';
+import { ButtonLink } from '../buttons/ButtonLink';
 
 export function UsefulMaterialsPage() {
   return (
@@ -8,12 +8,11 @@ export function UsefulMaterialsPage() {
       <div className='container'>
         <h1 className='container-title'>Полезные материалы</h1>
         <div className='container-content'>
-          <Link to='learning_sites/' className='button-link'>
-            <button>Учебные сайты</button>
-          </Link>
-          <Link to='school_bell_schedule/' className='button-link'>
-            <button>Расписание звонков</button>
-          </Link>
+          <ButtonLink to='learning_sites/' buttonName='Учебные сайты' />
+          <ButtonLink
+            to='school_bell_schedule/'
+            buttonName='Расписание звонков'
+          />
           <BackButton />
         </div>
       </div>

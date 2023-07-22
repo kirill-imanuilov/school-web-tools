@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import '../../index.css';
+import { ButtonLink } from '../buttons/ButtonLink';
 
 export function StaffPage() {
   return (
@@ -7,12 +7,11 @@ export function StaffPage() {
       <div className='container'>
         <h1 className='container-title'>Для персонала</h1>
         <div className='container-content'>
-          <Link to='coffee_delivery/' className='button-link'>
-            <button>Заказы (доставка кофе)</button>
-          </Link>
-          <Link to='feedback/' className='button-link'>
-            <button>Обращения (обратная связь)</button>
-          </Link>
+          <ButtonLink
+            to='coffee_delivery/'
+            buttonName='Заказы (доставка кофе)'
+          />
+          <ButtonLink to='feedback/' buttonName='Обращения (обратная связь)' />
         </div>
       </div>
     </div>
