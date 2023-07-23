@@ -23,7 +23,6 @@ export function CoffeeDeliveryForm() {
     date.getMinutes() + date.getHours() * 60 + coffeeCookingTime;
   const hours = parseInt(`${allMinutes / 60}`);
   const minutes = allMinutes % 60;
-  const startTime = '8:00';
   const closingTime = '26:00';
   var time = '';
 
