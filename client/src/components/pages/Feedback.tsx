@@ -1,5 +1,5 @@
 import '../../index.css';
-import { FeedbackForm } from '../FeedbackForm';
+import { FeedbackForm } from '../forms/FeedbackForm';
 import { BackButton } from '../buttons/BackButton';
 
 export function FeedbackPage() {

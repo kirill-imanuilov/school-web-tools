@@ -1,5 +1,5 @@
 import '../../index.css';
-import { CoffeeDeliveryForm } from '../CoffeeDeliveryForm';
+import { CoffeeDeliveryForm } from '../forms/CoffeeDeliveryForm';
 import { BackButton } from '../buttons/BackButton';
 
 export function CoffeeDeliveryPage() {

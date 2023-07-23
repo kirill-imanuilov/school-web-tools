@@ -1,5 +1,5 @@
-import '../index.css';
-import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
+import '../../index.css';
+import { AttachFileSquareButton } from '../buttons/AttachFileSquareButton';
 
 export function DataSendingForm() {
   const handleAttachFileChange = () => {};

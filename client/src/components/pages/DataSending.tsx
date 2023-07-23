@@ -1,5 +1,5 @@
 import '../../index.css';
-import { DataSendingForm } from '../DataSendingForm';
+import { DataSendingForm } from '../forms/DataSendingForm';
 import { BackButton } from '../buttons/BackButton';
 
 export function DataSendingPage() {
