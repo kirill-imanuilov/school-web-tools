@@ -39,6 +39,14 @@ class FeedbackData(BaseModel):
     userMessage: str
 
 
+class LostThingFoundData(BaseModel):
+    thingName: str
+    thingIMG: str
+    thingDetectionPlace: str
+    thingReceiptPlace: str
+    userMessage: str
+
+
 with connection:
     cursor = connection.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS coffeeDeliveryOrdersData (
@@ -66,6 +74,18 @@ with connection:
                           isIssueSolved INTEGER NOT NULL,
                           userEmail TEXT NOT NULL,
                           userMessage TEXT NOT NULL
+                      );
+                   """)
+    cursor.execute("""CREATE TABLE IF NOT EXISTS lostThingsFoundData (
+                          id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                          date TEXT NOT NULL,
+                          createdAt TEXT NOT NULL,
+                          isThingFound INTEGER NOT NULL,
+                          thingName TEXT NOT NULL,
+                          thingIMG BLOB NOT NULL,
+                          thingDetectionPlace TEXT NOT NULL,
+                          thingReceiptPlace TEXT NOT NULL,
+                          userMessage TEXT
                       );
                    """)
 
@@ -207,3 +227,26 @@ async def issue_solved(issue_id: int):
         cursor = connection.cursor()
         cursor.execute("""UPDATE feedbacksData SET isIssueSolved = 1 WHERE id = ?;""", (str(issue_id),))
     return {"message": "success"}
+
+@app.post("/lost_things/found/save_lost_thing_found_data/")
+async def save_lost_thing_found_data(lostThingFoundData: LostThingFoundData):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""INSERT INTO lostThingsFoundData (date,
+                                                           createdAt,
+                                                           isThingFound,
+                                                           thingName,
+                                                           thingIMG,
+                                                           thingDetectionPlace,
+                                                           thingReceiptPlace,
+                                                           userMessage)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+                       """, (str(datetime.date.today()),
+                             str(datetime.datetime.now().time())[0:8],
+                             0,
+                             lostThingFoundData.thingName,
+                             lostThingFoundData.thingIMG,
+                             lostThingFoundData.thingDetectionPlace,
+                             lostThingFoundData.thingReceiptPlace,
+                             lostThingFoundData.userMessage
+                             ))

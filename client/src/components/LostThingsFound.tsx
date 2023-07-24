@@ -4,14 +4,49 @@ import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
 import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState } from 'react';
 
+interface lostThingFoundData {
+  thingName: string;
+  thingIMG: string;
+  thingDetectionPlace: string;
+  thingReceiptPlace: string;
+  userMessage: string;
+}
+
 export function LostThingsFound() {
   const [isAdding, setIsAdding] = useState(false);
 
   const [thingName, setThingName] = useState('');
+  const [thingIMGHTML, setThingIMGHTML] = useState('');
   const [thingIMG, setThingIMG] = useState('');
   const [thingDetectionPlace, setThingDetectionPlace] = useState('');
   const [thingReceiptPlace, setThingReceiptPlace] = useState('');
   const [userMessage, setUserMessage] = useState('');
+
+  async function postLostThingFoundData(
+    lostThingFoundData: lostThingFoundData
+  ) {
+    return await fetch(
+      'http://localhost:8000/lost_things/found/save_lost_thing_found_data/',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lostThingFoundData),
+      }
+    );
+  }
+
+  const fileToBase64 = (file: File) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        resolve(e.target.result);
+      };
+      reader.onerror = (error: any) => {
+        reject(error);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
 
   const handleAddButtonClick = () => {
     setIsAdding(true);
@@ -23,11 +58,12 @@ export function LostThingsFound() {
 
     if (
       thingName !== '' &&
+      thingIMGHTML !== '' &&
       thingIMG !== '' &&
       thingDetectionPlace !== '' &&
       thingReceiptPlace !== ''
     ) {
-      const lostThingData = {
+      const lostThingFoundData = {
         thingName: thingName,
         thingIMG: thingIMG,
         thingDetectionPlace: thingDetectionPlace,
@@ -35,7 +71,10 @@ export function LostThingsFound() {
         userMessage: userMessage,
       };
 
+      postLostThingFoundData(lostThingFoundData);
+
       setThingName('');
+      setThingIMGHTML('');
       setThingIMG('');
       setThingDetectionPlace('');
       setThingReceiptPlace('');
@@ -46,8 +85,12 @@ export function LostThingsFound() {
   };
 
   const handleAttachThingIMGChange = (event: any) => {
-    if (event.target.files[0]) {
-      setThingIMG(URL.createObjectURL(event.target.files[0]));
+    const file = event.target.files[0];
+    if (file) {
+      setThingIMGHTML(URL.createObjectURL(file));
+      fileToBase64(file).then((response) => {
+        setThingIMG(`${response}`);
+      });
     }
   };
 
@@ -98,10 +141,10 @@ export function LostThingsFound() {
             value={userMessage}
             onChange={(event) => setUserMessage(event.target.value)}
           />
-          {thingIMG !== '' && (
+          {thingIMGHTML !== '' && (
             <div className='lost-things-form-loaded-thing-img-container'>
               <img
-                src={thingIMG}
+                src={thingIMGHTML}
                 width='100%'
                 className='lost-things-form-loaded-thing-img'
               />
