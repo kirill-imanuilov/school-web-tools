@@ -2,8 +2,9 @@ import '../index.css';
 import { ReactComponent as AddIMG } from '../IMG/add_img.svg';
 import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
 import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LostThingsFoundItem } from './LostThingsFoundItem';
 
 interface lostThingFoundData {
   thingName: string;
@@ -22,6 +23,8 @@ export function LostThingsFound() {
   const [thingDetectionPlace, setThingDetectionPlace] = useState('');
   const [thingReceiptPlace, setThingReceiptPlace] = useState('');
   const [userMessage, setUserMessage] = useState('');
+
+  const [data, setData] = useState([]);
 
   async function postLostThingFoundData(
     lostThingFoundData: lostThingFoundData
@@ -95,6 +98,21 @@ export function LostThingsFound() {
     }
   };
 
+  async function getLostThingsFoundData() {
+    return await fetch(
+      'http://localhost:8000/lost_things/found/get_lost_things_found_data'
+    )
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }
+
+  // getting data when the page loads
+  useEffect(() => {
+    getLostThingsFoundData();
+  }, []);
+  // updating data
+  setTimeout(() => getLostThingsFoundData(), 5000);
+
   return (
     <AnimatePresence>
       <div className='lost-things'>
@@ -107,6 +125,13 @@ export function LostThingsFound() {
             <AddIMG className='add-img' />
           </button>
         )}
+        {isAdding === false &&
+          data.map((lostThingFoundData, index) => (
+            <LostThingsFoundItem
+              lostThingFoundData={lostThingFoundData}
+              key={index}
+            />
+          ))}
         {isAdding === true && (
           <motion.form
             className='lost-things-form'
