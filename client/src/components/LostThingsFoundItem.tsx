@@ -1,5 +1,5 @@
 interface lostThingFoundData {
-  id: string;
+  id: number;
   date: string;
   createdAt: string;
   IsThingFound: number;
@@ -15,6 +15,16 @@ interface lostThingsFoundItemProps {
 }
 
 export function LostThingsFoundItem(props: lostThingsFoundItemProps) {
+  async function thingFound(id: number) {
+    await fetch(`http://localhost:8000/lost_things/found/thing_found/${id}`);
+  }
+
+  const handleThingFoundButtonClick = (event: any, id: number) => {
+    if (window.confirm('Вы уверены?')) {
+      thingFound(id);
+    }
+  };
+
   return (
     <div className='lost-things-found-item'>
       <div className='lost-things-found-item-title'>
@@ -48,6 +58,13 @@ export function LostThingsFoundItem(props: lostThingsFoundItemProps) {
             src={props.lostThingFoundData.thingIMG}
           />
         </div>
+        <button
+          onClick={(event) =>
+            handleThingFoundButtonClick(event, props.lostThingFoundData.id)
+          }
+        >
+          Это моё
+        </button>
       </div>
     </div>
   );

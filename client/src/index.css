@@ -287,6 +287,12 @@ input[type='checkbox']:checked {
   width: 100%;
 }
 
+.lost-things-found-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .submit-button-disabled {
   background-color: #005dff;
   cursor: not-allowed;
