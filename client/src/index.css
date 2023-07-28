@@ -123,14 +123,9 @@ input[type='file'] {
   gap: 5px;
 }
 
-.useful-materials-button-link {
-  flex: 1;
-}
-
-.useful-materials-copy-button {
+.link-copy-button {
   display: flex;
   width: 50px;
-  margin-left: auto;
 }
 
 .useful-materials-school-bell-schedule-container {
@@ -185,10 +180,6 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-form-input-office {
   width: 3em;
-}
-
-.coffee-delivery-form-select-building {
-  width: 100%;
 }
 
 .coffee-delivery-form-top-container {
@@ -248,7 +239,11 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-staff-order-content,
 .feedback-staff-feedback-content,
-.lost-things-found-item-content {
+.lost-things-found-item-content,
+.coffee-delivery-form-select-building,
+.useful-materials-button-link,
+.feedback-staff-feedback-email-button-link,
+.lost-things-found-item-thing-img {
   width: 100%;
 }
 
@@ -398,10 +393,6 @@ input[type='checkbox']:checked {
   width: 100%;
 }
 
-.feedback-staff-feedback-email-button-link {
-  width: 100%;
-}
-
 .lost-things-add-button,
 .lost-things-send-button {
   display: flex;
@@ -423,10 +414,6 @@ input[type='checkbox']:checked {
 .lost-things-form-loaded-thing-img-container,
 .lost-things-found-item-thing-img-container {
   display: flex;
-}
-
-.lost-things-found-item-thing-img {
-  width: 100%;
 }
 
 .lost-things {

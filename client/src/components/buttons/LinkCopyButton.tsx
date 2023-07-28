@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { ReactComponent as ContentCopyIMG } from '../IMG/content_copy_img.svg';
-import { ReactComponent as DoneIMG } from '../IMG/done_img.svg';
+import { ReactComponent as ContentCopyIMG } from '../../IMG/content_copy_img.svg';
+import { ReactComponent as DoneIMG } from '../../IMG/done_img.svg';
 
-interface UsefulMaterialsCopyButtonProps {
+interface LinkCopyButtonProps {
   url: string;
 }
 
-export function UsefulMaterialsCopyButton({
-  url,
-}: UsefulMaterialsCopyButtonProps) {
+export function LinkCopyButton({ url }: LinkCopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
-  function handleCopyButtonClick() {
+  function handleLinkCopyButtonClick() {
     if (navigator.clipboard) {
       try {
         navigator.clipboard.writeText(url);
@@ -24,10 +22,7 @@ export function UsefulMaterialsCopyButton({
     setIsCopied(true);
   }
   return (
-    <button
-      className='useful-materials-copy-button'
-      onClick={handleCopyButtonClick}
-    >
+    <button className='link-copy-button' onClick={handleLinkCopyButtonClick}>
       {!isCopied && <ContentCopyIMG className='img white-img' />}
       {isCopied && <DoneIMG className='img white-img' />}
     </button>

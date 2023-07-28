@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { UsefulMaterialsLearningSitesInterface } from '../models';
-import { UsefulMaterialsCopyButton } from './UsefulMaterialsCopyButton';
+import { LinkCopyButton } from './buttons/LinkCopyButton';
 
 interface UsefulMaterialsLearningSitesItemsProps {
   usefulMaterialsLearningSitesItem: UsefulMaterialsLearningSitesInterface;
@@ -19,9 +19,7 @@ export function UsefulMaterialsLearningSitesItems(
           {props.usefulMaterialsLearningSitesItem.name}
         </button>
       </Link>
-      <UsefulMaterialsCopyButton
-        url={props.usefulMaterialsLearningSitesItem.url}
-      />
+      <LinkCopyButton url={props.usefulMaterialsLearningSitesItem.url} />
     </div>
   );
 }
