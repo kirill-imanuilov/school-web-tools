@@ -5,6 +5,7 @@ import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LostThingsFoundItem } from './LostThingsFoundItem';
+import { Loading } from './Loading';
 
 interface lostThingFoundData {
   thingName: string;
@@ -16,6 +17,7 @@ interface lostThingFoundData {
 
 export function LostThingsFound() {
   const [isAdding, setIsAdding] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [thingName, setThingName] = useState('');
   const [thingIMGHTML, setThingIMGHTML] = useState('');
@@ -108,7 +110,9 @@ export function LostThingsFound() {
 
   // getting data when the page loads
   useEffect(() => {
-    getLostThingsFoundData();
+    getLostThingsFoundData().then(() => {
+      setIsLoading(false);
+    });
   }, []);
   // updating data
   setTimeout(() => getLostThingsFoundData(), 5000);
@@ -184,6 +188,11 @@ export function LostThingsFound() {
               </div>
             )}
           </motion.form>
+        )}
+        {isLoading === true && (
+          <div className='lost-things-found-loading-img-container'>
+            <Loading />
+          </div>
         )}
       </div>
     </AnimatePresence>

@@ -472,3 +472,25 @@ input[type='checkbox']:checked {
   flex-direction: column;
   gap: 5px;
 }
+
+.loading-img {
+  fill: #005dff;
+  animation-name: loading_rotation;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loading_rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lost-things-found-loading-img-container {
+  display: flex;
+  justify-content: center;
+}
