@@ -89,7 +89,7 @@ export function CoffeeDeliveryForm() {
   return (
     <form className='coffee-delivery-form'>
       <input
-        className='coffee-delivery-form-input coffee-delivery-form-input-name'
+        type='text'
         placeholder='Как Вас зовут?'
         value={name}
         onChange={(event) => setName(event.target.value)}
@@ -98,14 +98,14 @@ export function CoffeeDeliveryForm() {
       <div className='coffee-delivery-form-top-container'>
         <input
           type='number'
-          className='coffee-delivery-form-input coffee-delivery-form-input-office'
+          className='coffee-delivery-form-input-office'
           placeholder='Каб.'
           min={1}
           value={office}
           onChange={(event) => setOffice(event.target.value)}
         />
         <select
-          className='coffee-delivery-form-select coffee-delivery-form-select-building'
+          className='coffee-delivery-form-select-building'
           value={building}
           onChange={(event) => setBuilding(event.target.value)}
         >
@@ -114,7 +114,7 @@ export function CoffeeDeliveryForm() {
         </select>
       </div>
       <input
-        className='coffee-delivery-form-input coffee-delivery-form-input-time'
+        className='coffee-delivery-form-input-time'
         type='time'
         min={time}
         max={closingTime}
@@ -122,7 +122,6 @@ export function CoffeeDeliveryForm() {
         onChange={(event) => setDeliveryTime(event.target.value)}
       />
       <select
-        className='coffee-delivery-form-select'
         value={coffee}
         onChange={(event) => setCoffee(event.target.value)}
       >
@@ -165,11 +164,7 @@ export function CoffeeDeliveryForm() {
         />
         Сливки
       </label>
-      <select
-        className='coffee-delivery-form-select'
-        value={syrop}
-        onChange={(event) => setSyrop(event.target.value)}
-      >
+      <select value={syrop} onChange={(event) => setSyrop(event.target.value)}>
         <option>Без сиропа</option>
         <option>Ванильный сироп</option>
         <option>Грушевый сироп</option>
@@ -178,7 +173,6 @@ export function CoffeeDeliveryForm() {
         <option>Шоколадный сироп</option>
       </select>
       <select
-        className='coffee-delivery-form-select'
         value={addition}
         onChange={(event) => setAddition(event.target.value)}
       >

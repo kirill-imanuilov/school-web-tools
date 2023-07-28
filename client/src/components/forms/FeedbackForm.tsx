@@ -30,14 +30,13 @@ export function FeedbackForm() {
   return (
     <div className='feedback-form'>
       <input
-        className='feedback-form-input'
         type='email'
+        className='calc-width'
         placeholder='E-mail'
         value={userEmail}
         onChange={(event) => setUserEmail(event.target.value)}
       />
       <textarea
-        className='feedback-form-input feedback-form-input-message'
         placeholder='Сообщение'
         value={userMessage}
         onChange={(event) => setUserMessage(event.target.value)}

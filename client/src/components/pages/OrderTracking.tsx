@@ -25,10 +25,7 @@ export function OrderTrackingPage() {
 
   async function getOrderData() {
     return await fetch(
-      `http://localhost:8000/coffee_delivery/get_order_data/${id}`,
-      {
-        method: 'GET',
-      }
+      `http://localhost:8000/coffee_delivery/get_order_data/${id}`
     )
       .then((response) => response.json())
       .then((data) => setData(data));

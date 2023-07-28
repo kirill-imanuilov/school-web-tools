@@ -70,25 +70,24 @@ button:active {
   gap: 5px;
 }
 
-.attach-file-square-button,
-.data-sending-form-item,
-.coffee-delivery-form-input,
-.feedback-form-input,
-.lost-things-form-item {
+input[type='text'],
+input[type='number'],
+input[type='time'],
+input[type='email'],
+select,
+textarea,
+.attach-file-square-button {
   border-radius: 10px;
   border: 1px solid #cccccc;
   padding: 10px;
   font-size: 20px;
 }
 
-.data-sending-form-item,
-.lost-things-form-item {
+.calc-width {
   width: calc(100% - 21.6px);
 }
 
-.data-sending-form-input-message,
-.feedback-form-input-message,
-.lost-things-form-input-message {
+textarea {
   overflow: hidden;
   resize: none;
 }
@@ -103,32 +102,12 @@ input[type='file'] {
   width: auto;
 }
 
-.attach-file-img,
-.content-copy-img,
-.done-img,
-.timer-button-img,
-.timer-arrow-img,
-.stopwatch-button-img,
-.fullscreen-img,
-.dark-mode-img,
-.light-mode-img,
-.email-img,
-.add-img,
-.send-img {
+.img {
   height: auto;
   width: auto;
 }
 
-.content-copy-img,
-.done-img,
-.timer-button-img,
-.stopwatch-button-img,
-.fullscreen-img,
-.dark-mode-img,
-.light-mode-img,
-.email-img,
-.add-img,
-.send-img {
+.white-img {
   fill: #ffffff;
 }
 
@@ -136,11 +115,6 @@ input[type='file'] {
 .feedback-staff-feedback-bottom-container {
   display: flex;
   width: 100%;
-  gap: 5px;
-}
-
-.useful-materials-items {
-  display: grid;
   gap: 5px;
 }
 
@@ -170,13 +144,7 @@ input[type='file'] {
   width: fit-content;
 }
 
-.useful-materials-school-bell-schedule-th {
-  border: 1px solid #cccccc;
-  text-align: center;
-  vertical-align: middle;
-  padding: 10px;
-}
-
+.useful-materials-school-bell-schedule-th,
 .useful-materials-school-bell-schedule-td {
   border: 1px solid #cccccc;
   text-align: center;
@@ -184,17 +152,14 @@ input[type='file'] {
   padding: 10px;
 }
 
-.coffee-delivery-form {
+.coffee-delivery-form,
+.useful-materials-items {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.coffee-delivery-form-select {
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  padding: 10px;
-  font-size: 20px;
+select {
   height: 50px;
   cursor: pointer;
 }
@@ -365,15 +330,12 @@ input[type='checkbox']:checked {
   cursor: pointer;
 }
 
-.timer-arrow-button {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-}
-
+.timer-arrow-button,
 .timer-arrow-button:hover,
 .timer-arrow-button:focus,
 .timer-arrow-button:active {
+  display: flex;
+  align-items: center;
   background-color: transparent;
 }
 

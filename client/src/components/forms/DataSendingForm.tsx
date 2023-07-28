@@ -6,15 +6,8 @@ export function DataSendingForm() {
 
   return (
     <div className='data-sending-form'>
-      <input
-        type='email'
-        placeholder='E-mail'
-        className='data-sending-form-item data-sending-form-input-email'
-      />
-      <textarea
-        placeholder='Сообщение'
-        className='data-sending-form-item data-sending-form-input-message'
-      />
+      <input type='email' className='calc-width' placeholder='E-mail' />
+      <textarea placeholder='Сообщение' />
       <div className='data-sending-form-bottom-container'>
         <AttachFileSquareButton onChange={handleAttachFileChange} />
         <button type='submit'>Отправить</button>

@@ -117,11 +117,11 @@ export function Timer() {
         <div className='set-timer-time'>
           <div className='set-timer-time-item'>
             <button className='timer-arrow-button' onClick={increaseTimerHours}>
-              <ArrowUpIMG className='timer-arrow-img' />
+              <ArrowUpIMG className='img timer-arrow-img' />
             </button>
             {timerHours}
             <button className='timer-arrow-button' onClick={decreaseTimerHours}>
-              <ArrowDownIMG className='timer-arrow-img' />
+              <ArrowDownIMG className='img timer-arrow-img' />
             </button>
           </div>
           <div className='set-timer-time-item'>
@@ -129,14 +129,14 @@ export function Timer() {
               className='timer-arrow-button'
               onClick={increaseTimerMinutes}
             >
-              <ArrowUpIMG className='timer-arrow-img' />
+              <ArrowUpIMG className='img timer-arrow-img' />
             </button>
             {timerMinutes}
             <button
               className='timer-arrow-button'
               onClick={decreaseTimerMinutes}
             >
-              <ArrowDownIMG className='timer-arrow-img' />
+              <ArrowDownIMG className='img timer-arrow-img' />
             </button>
           </div>
           <div className='set-timer-time-item'>
@@ -144,14 +144,14 @@ export function Timer() {
               className='timer-arrow-button'
               onClick={increaseTimerSeconds}
             >
-              <ArrowUpIMG className='timer-arrow-img' />
+              <ArrowUpIMG className='img timer-arrow-img' />
             </button>
             {timerSeconds}
             <button
               className='timer-arrow-button'
               onClick={decreaseTimerSeconds}
             >
-              <ArrowDownIMG className='timer-arrow-img' />
+              <ArrowDownIMG className='img timer-arrow-img' />
             </button>
           </div>
         </div>
@@ -177,17 +177,17 @@ export function Timer() {
       <div className='timer-buttons'>
         {(isPaused || isStopped) && (
           <button className='timer-button' onClick={handleStartButtonClick}>
-            <StartIMG className='timer-button-img' />
+            <StartIMG className='img white-img' />
           </button>
         )}
         {isStarted && (
           <button className='timer-button' onClick={handlePauseButtonClick}>
-            <PauseIMG className='timer-button-img' />
+            <PauseIMG className='img white-img' />
           </button>
         )}
         {isPaused && (
           <button className='timer-button' onClick={handleStopButtonClick}>
-            <StopIMG className='timer-button-img' />
+            <StopIMG className='img white-img' />
           </button>
         )}
       </div>

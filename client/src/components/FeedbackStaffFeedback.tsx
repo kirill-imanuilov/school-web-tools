@@ -50,7 +50,7 @@ export function FeedbackStaffFeedback(props: feedbackStaffFeedbackProps) {
             className='button-link feedback-staff-feedback-email-button-link'
           >
             <button className='feedback-staff-feedback-email-button'>
-              <EmailIMG className='email-img' />
+              <EmailIMG className='img white-img' />
             </button>
           </Link>
           <button
@@ -59,7 +59,7 @@ export function FeedbackStaffFeedback(props: feedbackStaffFeedbackProps) {
               handleIssueSolvedButtonClick(event, props.feedbackData.id)
             }
           >
-            <DoneIMG className='done-img' />
+            <DoneIMG className='img white-img' />
           </button>
         </div>
       </div>

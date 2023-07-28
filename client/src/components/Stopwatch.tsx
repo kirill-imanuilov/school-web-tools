@@ -104,17 +104,17 @@ export function Stopwatch() {
       <div className='stopwatch-buttons'>
         {(isPaused || isStopped) && (
           <button className='stopwatch-button' onClick={handleStartButtonClick}>
-            <StartIMG className='stopwatch-button-img' />
+            <StartIMG className='img white-img' />
           </button>
         )}
         {isStarted && (
           <button className='stopwatch-button' onClick={handlePauseButtonClick}>
-            <PauseIMG className='stopwatch-button-img' />
+            <PauseIMG className='img white-img' />
           </button>
         )}
         {isPaused && (
           <button className='stopwatch-button' onClick={handleStopButtonClick}>
-            <StopIMG className='stopwatch-button-img' />
+            <StopIMG className='img white-img' />
           </button>
         )}
       </div>

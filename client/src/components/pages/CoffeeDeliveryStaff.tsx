@@ -6,10 +6,7 @@ export function CoffeeDeliveryStaffPage() {
   const [data, setData] = useState([]);
   async function getOrdersDataNotDone() {
     return await fetch(
-      'http://localhost:8000/coffee_delivery/staff/get_orders_data/not_done',
-      {
-        method: 'GET',
-      }
+      'http://localhost:8000/coffee_delivery/staff/get_orders_data/not_done'
     )
       .then((response) => response.json())
       .then((data) => setData(data));

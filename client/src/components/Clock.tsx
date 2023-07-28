@@ -63,11 +63,11 @@ export function Clock() {
       </div>
       <div className='clock-buttons'>
         <button className='clock-button' onClick={fullScreenHandle.enter}>
-          <FullScreenIMG className='fullscreen-img' />
+          <FullScreenIMG className='img white-img' />
         </button>
         <button className='clock-button' onClick={handleModeButtonClick}>
-          {mode === 'light' && <DarkModeIMG className='dark-mode-img' />}
-          {mode === 'dark' && <LightModeIMG className='light-mode-img' />}
+          {mode === 'light' && <DarkModeIMG className='img white-img' />}
+          {mode === 'dark' && <LightModeIMG className='img white-img' />}
         </button>
       </div>
     </div>

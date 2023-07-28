@@ -126,7 +126,7 @@ export function LostThingsFound() {
             className='lost-things-add-button'
             onClick={handleAddButtonClick}
           >
-            <AddIMG className='add-img' />
+            <AddIMG className='img white-img' />
           </button>
         )}
         {isAdding === false &&
@@ -149,11 +149,12 @@ export function LostThingsFound() {
               className='lost-things-send-button'
               onClick={handleSendButtonClick}
             >
-              <SendIMG className='send-img' />
+              <SendIMG className='img white-img' />
             </button>
             <div className='lost-things-form-top-container'>
               <input
-                className='lost-things-form-item'
+                type='text'
+                className='calc-width'
                 placeholder='Что Вы нашли?'
                 value={thingName}
                 onChange={(event) => setThingName(event.target.value)}
@@ -161,20 +162,21 @@ export function LostThingsFound() {
               <AttachFileSquareButton onChange={handleAttachThingIMGChange} />
             </div>
             <input
-              className='lost-things-form-item'
+              type='text'
+              className='calc-width'
               placeholder='Где Вы нашли?'
               value={thingDetectionPlace}
               onChange={(event) => setThingDetectionPlace(event.target.value)}
             />
             <input
-              className='lost-things-form-item'
+              type='text'
+              className='calc-width'
               placeholder='Где забрать владельцу?'
               value={thingReceiptPlace}
               onChange={(event) => setThingReceiptPlace(event.target.value)}
             />
             <textarea
               placeholder='Сообщение/описание'
-              className='lost-things-form-item lost-things-form-input-message'
               value={userMessage}
               onChange={(event) => setUserMessage(event.target.value)}
             />

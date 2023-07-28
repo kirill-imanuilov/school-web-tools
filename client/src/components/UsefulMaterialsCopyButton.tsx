@@ -28,8 +28,8 @@ export function UsefulMaterialsCopyButton({
       className='useful-materials-copy-button'
       onClick={handleCopyButtonClick}
     >
-      {!isCopied && <ContentCopyIMG className='content-copy-img' />}
-      {isCopied && <DoneIMG className='done-img' />}
+      {!isCopied && <ContentCopyIMG className='img white-img' />}
+      {isCopied && <DoneIMG className='img white-img' />}
     </button>
   );
 }
