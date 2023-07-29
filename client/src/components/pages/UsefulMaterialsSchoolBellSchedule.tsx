@@ -11,13 +11,13 @@ export function UsefulMaterialsSchoolBellSchedulePage() {
             <div className='useful-materials-school-bell-schedule-container'>
               <table className='useful-materials-school-bell-schedule-table'>
                 <tr>
-                  <th className='useful-materials-school-bell-schedule-th'>
+                  <th className='useful-materials-school-bell-schedule-th border-top-left-radius'>
                     №
                   </th>
                   <th className='useful-materials-school-bell-schedule-th'>
                     Начало
                   </th>
-                  <th className='useful-materials-school-bell-schedule-th'>
+                  <th className='useful-materials-school-bell-schedule-th border-top-right-radius'>
                     Конец
                   </th>
                 </tr>
@@ -243,7 +243,7 @@ export function UsefulMaterialsSchoolBellSchedulePage() {
                 </tr>
                 <tr>
                   <td
-                    className='useful-materials-school-bell-schedule-td'
+                    className='useful-materials-school-bell-schedule-td border-bottom-left-radius border-bottom-right-radius'
                     colSpan={3}
                   >
                     Перемена 10 минут
