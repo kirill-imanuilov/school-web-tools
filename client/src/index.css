@@ -1,6 +1,22 @@
+:root {
+  --light-blue-color: #005dff;
+  --dark-blue-color: #0054e5;
+  --grey-color: #cccccc;
+  --white-color: #ffffff;
+  --dark-white-color: #e5e5e5;
+  --black-color: #000000;
+
+  --font-size: 20px;
+  --padding: 10px;
+  --border-radius: 10px;
+  --border: 1px solid var(--grey-color);
+  --item-height: 50px;
+  --gap: 5px;
+}
+
 html {
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: var(--font-size);
 }
 
 .page {
@@ -16,8 +32,8 @@ html {
   flex-direction: column;
   width: 70%;
   max-width: 500px;
-  box-shadow: 0px 0px 30px #cccccc;
-  border-radius: 10px;
+  box-shadow: 0px 0px 30px var(--grey-color);
+  border-radius: var(--border-radius);
   padding: 15px;
   margin: auto;
 }
@@ -29,22 +45,22 @@ html {
 }
 
 button {
-  font-size: 20px;
+  font-size: var(--font-size);
   width: 100%;
-  height: 50px;
-  padding: 10px;
+  height: var(--item-height);
+  padding: var(--padding);
   border: none;
-  border-radius: 10px;
-  background-color: #005dff;
-  color: #ffffff;
+  border-radius: var(--border-radius);
+  background-color: var(--light-blue-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 
 button:hover,
 button:focus,
 button:active {
-  background-color: #0054e5;
-  color: #e5e5e5;
+  background-color: var(--dark-blue-color);
+  color: var(--dark-white-color);
 }
 
 .button-link {
@@ -54,20 +70,20 @@ button:active {
 .container-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .data-sending-form,
 .feedback-form {
   display: grid;
   grid-template-rows: 50px 150px 50px;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .lost-things-form {
   display: grid;
   grid-template-rows: 50px 50px 50px 50px 150px;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 input[type='text'],
@@ -77,10 +93,10 @@ input[type='email'],
 select,
 textarea,
 .attach-file-square-button {
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  padding: 10px;
-  font-size: 20px;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  padding: var(--padding);
+  font-size: var(--font-size);
 }
 
 .calc-width {
@@ -108,24 +124,24 @@ input[type='file'] {
 }
 
 .white-img {
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .data-sending-form-bottom-container,
 .feedback-staff-feedback-bottom-container {
   display: flex;
   width: 100%;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .useful-materials-item {
   display: flex;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .link-copy-button {
   display: flex;
-  width: 50px;
+  width: var(--item-height);
 }
 
 .useful-materials-school-bell-schedule-container {
@@ -136,43 +152,43 @@ input[type='file'] {
 
 .useful-materials-school-bell-schedule-table {
   width: fit-content;
-  background-color: #cccccc;
-  border-radius: 10px;
+  background-color: var(--grey-color);
+  border-radius: var(--border-radius);
 }
 
 .useful-materials-school-bell-schedule-th,
 .useful-materials-school-bell-schedule-td {
   text-align: center;
   vertical-align: middle;
-  padding: 10px;
-  background-color: #ffffff;
+  padding: var(--padding);
+  background-color: var(--white-color);
 }
 
 .border-top-left-radius {
-  border-top-left-radius: 10px;
+  border-top-left-radius: var(--border-radius);
 }
 
 .border-top-right-radius {
-  border-top-right-radius: 10px;
+  border-top-right-radius: var(--border-radius);
 }
 
 .border-bottom-left-radius {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .border-bottom-right-radius {
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .coffee-delivery-form,
 .useful-materials-items {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 select {
-  height: 50px;
+  height: var(--item-height);
   cursor: pointer;
 }
 
@@ -184,15 +200,15 @@ select {
 input[type='checkbox'],
 input[type='checkbox']:checked {
   appearance: none;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
   width: 1.5em;
   height: 1.5em;
   cursor: pointer;
 }
 
 input[type='checkbox']:checked {
-  background-color: #005dff;
+  background-color: var(--light-blue-color);
 }
 
 .coffee-delivery-form-input-office {
@@ -201,7 +217,7 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-form-top-container {
   display: flex;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .coffee-delivery-form-input-time {
@@ -213,9 +229,9 @@ input[type='checkbox']:checked {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  padding: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
   font-weight: bold;
   flex-direction: column;
 }
@@ -234,9 +250,9 @@ input[type='checkbox']:checked {
 .lost-things-found-item {
   display: flex;
   justify-content: center;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  padding: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
 }
 
 .coffee-delivery-staff-order,
@@ -267,19 +283,19 @@ input[type='checkbox']:checked {
 .lost-things-found-item-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .submit-button-disabled {
-  background-color: #005dff;
+  background-color: var(--light-blue-color);
   cursor: not-allowed;
 }
 
 .submit-button-disabled:hover,
 .submit-button-disabled:focus,
 .submit-button-disabled:active {
-  color: #ffffff;
-  background-color: #005dff;
+  color: var(--white-color);
+  background-color: var(--light-blue-color);
 }
 
 .timer,
@@ -287,7 +303,7 @@ input[type='checkbox']:checked {
 .clock {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
   align-items: center;
 }
 
@@ -296,10 +312,10 @@ input[type='checkbox']:checked {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
   width: fit-content;
-  padding: 10px;
+  padding: var(--padding);
   font-family: monospace;
 }
 
@@ -307,8 +323,8 @@ input[type='checkbox']:checked {
 .stopwatch-button,
 .clock-button {
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: var(--item-height);
+  width: var(--item-height);
 }
 
 .timer-buttons,
@@ -316,7 +332,7 @@ input[type='checkbox']:checked {
 .clock-buttons {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: var(--gap);
   margin-bottom: 10px;
 }
 
@@ -324,7 +340,7 @@ input[type='checkbox']:checked {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .set-timer-time-item {
@@ -332,10 +348,10 @@ input[type='checkbox']:checked {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  font-size: 20px;
-  width: 50px;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  font-size: var(--font-size);
+  width: var(--item-height);
 }
 
 .timer-arrow-img {
@@ -356,21 +372,21 @@ input[type='checkbox']:checked {
   flex-direction: column;
   align-items: center;
   font-size: 40px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
   width: fit-content;
-  padding: 10px;
+  padding: var(--padding);
   font-family: monospace;
 }
 
 .clock-values-light {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .clock-values-dark {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
 
 .clock-values-time {
@@ -382,24 +398,24 @@ input[type='checkbox']:checked {
 .clock-values-date {
   display: flex;
   width: fit-content;
-  font-size: 20px;
+  font-size: var(--font-size);
 }
 
 .clock-values-time.fullscreen-enabled {
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   font-size: 18vw;
 }
 
 .clock-values-time-light.fullscreen-enabled {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .clock-values-time-dark.fullscreen-enabled {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
 
 .feedback-staff-feedback-email-button,
@@ -419,13 +435,13 @@ input[type='checkbox']:checked {
 
 .lost-things-form-top-container {
   display: flex;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .lost-things-form-loaded-thing-img,
 .lost-things-found-item-thing-img {
-  border: 1px solid #cccccc;
-  border-radius: 10px;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .lost-things-form-loaded-thing-img-container,
@@ -436,11 +452,11 @@ input[type='checkbox']:checked {
 .lost-things {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
 }
 
 .loading-img {
-  fill: #005dff;
+  fill: var(--light-blue-color);
   animation-name: loading_rotation;
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
