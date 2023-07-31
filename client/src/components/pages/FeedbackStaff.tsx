@@ -1,8 +1,11 @@
 import '../../index.css';
 import { useState, useEffect } from 'react';
 import { FeedbackStaffFeedback } from '../FeedbackStaffFeedback';
+import { Loading } from '../Loading';
 
 export function FeedbackStaffPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const [data, setData] = useState([]);
 
   async function getFeedbacksDataNotSolved() {
@@ -15,7 +18,9 @@ export function FeedbackStaffPage() {
 
   // getting data when the page loads
   useEffect(() => {
-    getFeedbacksDataNotSolved();
+    getFeedbacksDataNotSolved().then(() => {
+      setIsLoading(false);
+    });
   }, []);
   // updating data
   setTimeout(() => getFeedbacksDataNotSolved(), 5000);
@@ -28,6 +33,11 @@ export function FeedbackStaffPage() {
           {data.map((feedbackData, index) => (
             <FeedbackStaffFeedback feedbackData={feedbackData} key={index} />
           ))}
+          {isLoading === true && (
+            <div className='feedback-staff-loading-img-container'>
+              <Loading />
+            </div>
+          )}
         </div>
       </div>
     </div>
