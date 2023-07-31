@@ -1,8 +1,11 @@
 import '../../index.css';
 import { useState, useEffect } from 'react';
 import { CoffeeDeliveryStaffOrder } from '../CoffeeDeliveryStaffOrder';
+import { Loading } from '../Loading';
 
 export function CoffeeDeliveryStaffPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const [data, setData] = useState([]);
   async function getOrdersDataNotDone() {
     return await fetch(
@@ -14,7 +17,9 @@ export function CoffeeDeliveryStaffPage() {
 
   // getting data when the page loads
   useEffect(() => {
-    getOrdersDataNotDone();
+    getOrdersDataNotDone().then(() => {
+      setIsLoading(false);
+    });
   }, []);
   // updating data
   setTimeout(() => getOrdersDataNotDone(), 5000);
@@ -27,6 +32,11 @@ export function CoffeeDeliveryStaffPage() {
           {data.map((orderData, index) => (
             <CoffeeDeliveryStaffOrder orderData={orderData} key={index} />
           ))}
+          {isLoading === true && (
+            <div className='coffee-delivery-staff-loading-img-container'>
+              <Loading />
+            </div>
+          )}
         </div>
       </div>
     </div>
