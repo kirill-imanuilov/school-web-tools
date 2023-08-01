@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LostThingsFoundItem } from './LostThingsFoundItem';
 import { Loading } from './Loading';
+import { fileToBase64 } from './fileToBase64';
 
 interface lostThingFoundData {
   thingName: string;
@@ -40,19 +41,6 @@ export function LostThingsFound() {
       }
     );
   }
-
-  const fileToBase64 = (file: File) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        resolve(e.target.result);
-      };
-      reader.onerror = (error: any) => {
-        reject(error);
-      };
-      reader.readAsDataURL(file);
-    });
-  };
 
   const handleAddButtonClick = () => {
     setIsAdding(true);

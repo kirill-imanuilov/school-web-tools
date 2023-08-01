@@ -4,6 +4,7 @@ import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
 import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { fileToBase64 } from './fileToBase64';
 
 interface lostThingLostData {
   thingName: string;
@@ -65,19 +66,6 @@ export function LostThingsLost() {
         setThingIMG(`${response}`);
       });
     }
-  };
-
-  const fileToBase64 = (file: File) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        resolve(e.target.result);
-      };
-      reader.onerror = (error: any) => {
-        reject(error);
-      };
-      reader.readAsDataURL(file);
-    });
   };
 
   return (
