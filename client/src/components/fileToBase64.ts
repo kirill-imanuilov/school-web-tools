@@ -10,4 +10,3 @@ export function fileToBase64(file: File) {
     reader.readAsDataURL(file);
   });
 }
-

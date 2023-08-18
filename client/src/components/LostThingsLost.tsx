@@ -24,8 +24,7 @@ export function LostThingsLost() {
   const [userContacts, setUserContacts] = useState('');
   const [userMessage, setUserMessage] = useState('');
 
-  const postLostThingLostData = (lostThingLostData: lostThingLostData) => {
-  };
+  const postLostThingLostData = (lostThingLostData: lostThingLostData) => {};
 
   const handleAddButtonClick = () => {
     setIsAdding(true);
