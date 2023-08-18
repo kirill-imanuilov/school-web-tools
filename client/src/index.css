@@ -180,7 +180,12 @@ input[type='file'] {
   border-bottom-right-radius: var(--border-radius);
 }
 
-.coffee-delivery-form,
+.coffee-delivery-form {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  gap: var(--gap);
+}
+
 .useful-materials-items {
   display: flex;
   flex-direction: column;
@@ -195,6 +200,21 @@ select {
 .coffee-delivery-form-checkbox-label {
   display: flex;
   align-items: center;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.switch-container-text {
+  display: flex;
+  align-items: center;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 0 var(--padding);
+  width: 100%;
 }
 
 input[type='checkbox'],
@@ -480,7 +500,6 @@ input[type='checkbox']:checked {
 }
 
 .switch {
-  --border-radius: 100px;
   border: var(--border);
   align-items: center;
   border-radius: var(--border-radius);
@@ -489,6 +508,7 @@ input[type='checkbox']:checked {
   width: calc(var(--item-height) * 2 - 11.6px);
   padding: 0 5px;
   cursor: pointer;
+  user-select: none;
 }
 
 .switch-on {

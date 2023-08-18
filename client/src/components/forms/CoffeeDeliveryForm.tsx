@@ -1,6 +1,7 @@
 import '../../index.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Switch } from '../Switch';
 
 interface orderData {
   deliveryTime: string;
@@ -86,6 +87,10 @@ export function CoffeeDeliveryForm() {
     postOrderData(orderData).then((n) => navigate(`order_tracking/${n}`));
   };
 
+  const handleSwitchClick = (state: boolean, setState: any) => {
+    setState(!state);
+  };
+
   return (
     <form className='coffee-delivery-form'>
       <input
@@ -132,38 +137,34 @@ export function CoffeeDeliveryForm() {
         <option>Ристретто</option>
         <option>Эспрессо</option>
       </select>
-      <label className='coffee-delivery-form-checkbox-label'>
-        <input
-          type='checkbox'
-          checked={cinnamon}
-          onChange={(event) => setCinnamon(event.target.checked)}
+      <div className='switch-container'>
+        <div className='switch-container-text'>Корица</div>
+        <Switch
+          state={cinnamon}
+          handleClick={() => handleSwitchClick(cinnamon, setCinnamon)}
         />
-        Корица
-      </label>
-      <label className='coffee-delivery-form-checkbox-label'>
-        <input
-          type='checkbox'
-          checked={lemon}
-          onChange={(event) => setLemon(event.target.checked)}
+      </div>
+      <div className='switch-container'>
+        <div className='switch-container-text'>Лимон</div>
+        <Switch
+          state={lemon}
+          handleClick={() => handleSwitchClick(lemon, setLemon)}
         />
-        Лимон
-      </label>
-      <label className='coffee-delivery-form-checkbox-label'>
-        <input
-          type='checkbox'
-          checked={sugar}
-          onChange={(event) => setSugar(event.target.checked)}
+      </div>
+      <div className='switch-container'>
+        <div className='switch-container-text'>Сахар</div>
+        <Switch
+          state={sugar}
+          handleClick={() => handleSwitchClick(sugar, setSugar)}
         />
-        Сахар
-      </label>
-      <label className='coffee-delivery-form-checkbox-label'>
-        <input
-          type='checkbox'
-          checked={cream}
-          onChange={(event) => setCream(event.target.checked)}
+      </div>
+      <div className='switch-container'>
+        <div className='switch-container-text'>Сливки</div>
+        <Switch
+          state={cream}
+          handleClick={() => handleSwitchClick(cream, setCream)}
         />
-        Сливки
-      </label>
+      </div>
       <select value={syrop} onChange={(event) => setSyrop(event.target.value)}>
         <option>Без сиропа</option>
         <option>Ванильный сироп</option>

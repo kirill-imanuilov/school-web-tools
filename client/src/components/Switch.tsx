@@ -3,11 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ReactComponent as Done_IMG } from '../IMG/done_img.svg';
 import { ReactComponent as Close_IMG } from '../IMG/close_img.svg';
 
-export function Switch() {
-  const [isSwitched, setIsSwitched] = useState(false);
+interface SwitchProps {
+  state: boolean;
+  handleClick: () => void;
+}
+
+export function Switch({ state, handleClick }: SwitchProps) {
+  const [isSwitched, setIsSwitched] = useState(state);
 
   const handleToggleClick = () => {
     setIsSwitched((prev) => !prev);
+    handleClick();
   };
 
   const toggleAnimation = {
@@ -27,21 +33,9 @@ export function Switch() {
       <AnimatePresence initial={false}>
         <motion.div className='toggle' layout transition={toggleAnimation}>
           {isSwitched ? (
-            <DoneIMG
-              className='img toggle-on-img'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            />
+            <DoneIMG className='img toggle-on-img' />
           ) : (
-            <CloseIMG
-              className='img toggle-off-img'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            />
+            <CloseIMG className='img toggle-off-img' />
           )}
         </motion.div>
       </AnimatePresence>
