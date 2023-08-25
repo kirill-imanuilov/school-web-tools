@@ -206,6 +206,7 @@ select {
   display: flex;
   justify-content: space-between;
   gap: var(--gap);
+  width: 100%;
 }
 
 .switch-container-text {

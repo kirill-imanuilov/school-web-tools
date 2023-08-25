@@ -4,9 +4,11 @@ import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 import { ReactComponent as FullScreenIMG } from '../IMG/fullscreen_img.svg';
 import { ReactComponent as DarkModeIMG } from '../IMG/dark_mode_img.svg';
 import { ReactComponent as LightModeIMG } from '../IMG/light_mode_img.svg';
+import { Switch } from './Switch';
 
 export function Clock() {
   const [mode, setMode] = useState('light');
+  const [showSeconds, setShowSeconds] = useState(true);
 
   const handleModeButtonClick = () => {
     if (mode === 'dark') {
@@ -33,6 +35,10 @@ export function Clock() {
     return () => clearInterval(interval);
   });
 
+  const handleSwitchClick = (state: boolean, setState: any) => {
+    setState(!state);
+  };
+
   return (
     <div className='clock'>
       <div className={`clock-values clock-values-${mode}`}>
@@ -49,11 +55,13 @@ export function Clock() {
             {`${clockMinutes}`.length === 1 && 0}
             {clockMinutes}
           </div>
-          :
-          <div>
-            {`${clockSeconds}`.length === 1 && 0}
-            {clockSeconds}
-          </div>
+          {showSeconds && ':'}
+          {showSeconds && (
+            <div>
+              {`${clockSeconds}`.length === 1 && 0}
+              {clockSeconds}
+            </div>
+          )}
         </FullScreen>
         <div className='clock-values-date'>
           {`${date.getDate()}`.length === 1 && 0}
@@ -69,6 +77,17 @@ export function Clock() {
           {mode === 'light' && <DarkModeIMG className='img white-img' />}
           {mode === 'dark' && <LightModeIMG className='img white-img' />}
         </button>
+      </div>
+      <div className='switch-container'>
+        <div className='switch-container-text'>Показывать секунды</div>
+        <div>
+          <Switch
+            state={showSeconds}
+            handleClick={() => {
+              handleSwitchClick(showSeconds, setShowSeconds);
+            }}
+          />
+        </div>
       </div>
     </div>
   );
