@@ -265,7 +265,6 @@ input[type='checkbox']:checked {
   color: green;
 }
 
-.coffee-delivery-order-tracking-order-details,
 .coffee-delivery-staff-order,
 .feedback-staff-feedback,
 .lost-things-found-item {
@@ -534,4 +533,26 @@ input[type='checkbox']:checked {
 
 .toggle-on-img {
   fill: var(--light-blue-color);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  width: auto;
+  padding: var(--padding);
+  cursor: pointer;
+  user-select: none;
+}
+
+.details-title {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.details-content {
+  display: flex;
 }
