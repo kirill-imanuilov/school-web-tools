@@ -340,3 +340,10 @@ async def thing_found(thing_id: int):
         cursor = connection.cursor()
         cursor.execute("""UPDATE lostThingsFoundData SET isThingFound = 1 WHERE id = ?;""", (str(thing_id),))
     return {"message": "success"}
+
+@app.get("/lost_things/lost/thing_found/{thing_id}")
+async def thing_found(thing_id: int):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""UPDATE lostThingsLostData SET isThingFound = 1 WHERE id = ?;""", (str(thing_id),))
+    return {"message": "success"}
