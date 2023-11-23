@@ -24,7 +24,16 @@ export function LostThingsLost() {
   const [userContacts, setUserContacts] = useState('');
   const [userMessage, setUserMessage] = useState('');
 
-  const postLostThingLostData = (lostThingLostData: lostThingLostData) => {};
+  async function postLostThingLostData(lostThingLostData: lostThingLostData) {
+    return await fetch(
+      'http://localhost:8000/lost_things_lost/save_lost_thing_lost_data',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lostThingLostData),
+      }
+    );
+  }
 
   const handleAddButtonClick = () => {
     setIsAdding(true);
