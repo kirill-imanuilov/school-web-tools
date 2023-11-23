@@ -47,6 +47,14 @@ class LostThingFoundData(BaseModel):
     userMessage: str
 
 
+class LostThingLostData(BaseModel):
+    thingName: str
+    thingIMG: str
+    thingLossPlace: str
+    userContacts: str
+    userMessage: str
+
+
 with connection:
     cursor = connection.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS coffeeDeliveryOrdersData (
@@ -261,6 +269,30 @@ async def save_lost_thing_found_data(lostThingFoundData: LostThingFoundData):
                              lostThingFoundData.thingReceiptPlace,
                              lostThingFoundData.userMessage
                              ))
+@app.post("/lost_things_lost/save_lost_thing_lost_data")
+async def save_lost_thing_lost_data(lostThingLostData: LostThingLostData):
+    with connection:
+        cursor = connection.cursor()
+        cursor.execute("""
+                       INSERT INTO lostThingsLostData (date,
+                                                       createdAt,
+                                                       isThingFound,
+                                                       thingName,
+                                                       thingIMG,
+                                                       thingLossPlace,
+                                                       userContacts,
+                                                       userMessage)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                       """, (str(datetime.date.today()),
+                             str(datetime.datetime.now().time())[0:8],
+                             0,
+                             lostThingLostData.thingName,
+                             lostThingLostData.thingIMG,
+                             lostThingLostData.thingLossPlace,
+                             lostThingLostData.userContacts,
+                             lostThingLostData.userMessage
+                             ))
+    return {"message": "success"}
 
 @app.get("/lost_things/found/get_lost_things_found_data/")
 async def get_lost_things_found_data():
