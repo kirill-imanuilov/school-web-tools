@@ -88,6 +88,17 @@ with connection:
                           userMessage TEXT
                       );
                    """)
+    cursor.execute("""CREATE TABLE IF NOT EXISTS lostThingsLostData (
+                          id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                          date TEXT NOT NULL,
+                          createdAt TEXT NOT NULL,
+                          isThingFound INTEGER NOT NULL,
+                          thingName TEXT NOT NULL,
+                          thingIMG BLOB NOT NULL,
+                          thingLossPlace TEXT NOT NULL,
+                          userContacts TEXT NOT NULL,
+                          userMessage TEXT NOT NULL
+                   )""")
 
 
 @app.post("/coffee_delivery/save_order_data/")
