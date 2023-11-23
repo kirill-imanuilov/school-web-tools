@@ -314,6 +314,26 @@ async def get_lost_things_found_data():
                 })
         return a
 
+@app.get("/lost_things/lost/get_lost_things_lost_data/")
+async def get_lost_things_lost_data():
+    with connection:
+        cursor = connection.cursor()
+        data = cursor.execute("""SELECT * FROM lostThingsLostData WHERE isThingFound = 0 ORDER BY id DESC;""").fetchall()
+        a = []
+        for elem in data:
+            a.append({
+                "id": elem[0],
+                "date": elem[1],
+                "createdAt": elem[2],
+                "isThingFound": elem[3],
+                "thingName": elem[4],
+                "thingIMG": elem[5],
+                "thingLossPlace": elem[6],
+                "userContacts": elem[7],
+                "userMessage": elem[8]
+                })
+        return a
+
 @app.get("/lost_things/found/thing_found/{thing_id}")
 async def thing_found(thing_id: int):
     with connection:
