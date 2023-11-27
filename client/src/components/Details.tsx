@@ -10,10 +10,7 @@ export function Details(props: DetailsProps) {
   const [isShow, setIsShow] = useState(false);
   return (
     <AnimatePresence>
-      <div
-        className='details'
-        onClick={() => setIsShow((prev) => !prev)}
-      >
+      <div className='details' onClick={() => setIsShow((prev) => !prev)}>
         <div className='details-title'>{props.title}</div>
         {isShow && (
           <motion.div
