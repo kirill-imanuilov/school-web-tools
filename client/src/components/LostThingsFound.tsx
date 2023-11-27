@@ -180,7 +180,7 @@ export function LostThingsFound() {
           </motion.form>
         )}
         {isLoading === true && (
-          <div className='lost-things-found-loading-img-container'>
+          <div className='loading-img-container'>
             <Loading />
           </div>
         )}

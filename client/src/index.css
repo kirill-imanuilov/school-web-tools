@@ -492,9 +492,7 @@ input[type='checkbox']:checked {
   }
 }
 
-.lost-things-found-loading-img-container,
-.coffee-delivery-staff-loading-img-container,
-.feedback-staff-loading-img-container {
+.loading-img-container {
   display: flex;
   justify-content: center;
 }

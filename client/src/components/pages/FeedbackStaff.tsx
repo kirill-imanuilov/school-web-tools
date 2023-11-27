@@ -34,7 +34,7 @@ export function FeedbackStaffPage() {
             <FeedbackStaffFeedback feedbackData={feedbackData} key={index} />
           ))}
           {isLoading === true && (
-            <div className='feedback-staff-loading-img-container'>
+            <div className='loading-img-container'>
               <Loading />
             </div>
           )}

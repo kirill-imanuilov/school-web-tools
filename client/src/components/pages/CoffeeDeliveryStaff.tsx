@@ -33,7 +33,7 @@ export function CoffeeDeliveryStaffPage() {
             <CoffeeDeliveryStaffOrder orderData={orderData} key={index} />
           ))}
           {isLoading === true && (
-            <div className='coffee-delivery-staff-loading-img-container'>
+            <div className='loading-img-container'>
               <Loading />
             </div>
           )}
