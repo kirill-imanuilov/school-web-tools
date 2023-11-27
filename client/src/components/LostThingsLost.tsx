@@ -16,6 +16,7 @@ interface lostThingLostData {
 
 export function LostThingsLost() {
   const [isAdding, setIsAdding] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [thingName, setThingName] = useState('');
   const [thingIMGHTML, setThingIMGHTML] = useState('');
@@ -23,6 +24,8 @@ export function LostThingsLost() {
   const [thingLossPlace, setThingLossPlace] = useState('');
   const [userContacts, setUserContacts] = useState('');
   const [userMessage, setUserMessage] = useState('');
+
+  const [data, setData] = useState([]);
 
   async function postLostThingLostData(lostThingLostData: lostThingLostData) {
     return await fetch(
@@ -75,6 +78,23 @@ export function LostThingsLost() {
       });
     }
   };
+
+  async function getLostThingsLostData() {
+    return await fetch(
+      'http://localhost:8000/lost_things/lost/get_lost_things_lost_data'
+    )
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }
+
+  // getting data when the page loads
+  useEffect(() => {
+    getLostThingsLostData().then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+  // updating data
+  setTimeout(() => getLostThingsLostData(), 5000);
 
   return (
     <AnimatePresence>
