@@ -4,6 +4,7 @@ import { ReactComponent as SendIMG } from '../IMG/send_img.svg';
 import { AttachFileSquareButton } from './buttons/AttachFileSquareButton';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Loading } from './Loading';
 import { fileToBase64 } from './fileToBase64';
 
 interface lostThingLostData {
@@ -16,7 +17,7 @@ interface lostThingLostData {
 
 export function LostThingsLost() {
   const [isAdding, setIsAdding] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [thingName, setThingName] = useState('');
   const [thingIMGHTML, setThingIMGHTML] = useState('');
@@ -162,6 +163,11 @@ export function LostThingsLost() {
               </div>
             )}
           </motion.form>
+        )}
+        {isLoading === true && (
+          <div className='loading-img-container'>
+            <Loading />
+          </div>
         )}
       </div>
     </AnimatePresence>
