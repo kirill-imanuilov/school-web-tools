@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loading } from './Loading';
 import { fileToBase64 } from './fileToBase64';
+import { LostThingsLostItem } from './LostThingsLostItem';
 
 interface lostThingLostData {
   thingName: string;
@@ -109,6 +110,13 @@ export function LostThingsLost() {
             <AddIMG className='img white-img' />
           </button>
         )}
+        {isAdding === false &&
+          data.map((lostThingLostData, index) => (
+            <LostThingsLostItem
+              lostThingLostData={lostThingLostData}
+              key={index}
+            />
+          ))}
         {isAdding === true && (
           <motion.form
             className='lost-things-form'
