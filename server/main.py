@@ -335,14 +335,14 @@ async def get_lost_things_lost_data():
         return a
 
 @app.get("/lost_things/found/thing_found/{thing_id}")
-async def thing_found(thing_id: int):
+async def lost_things_found_thing_found(thing_id: int):
     with connection:
         cursor = connection.cursor()
         cursor.execute("""UPDATE lostThingsFoundData SET isThingFound = 1 WHERE id = ?;""", (str(thing_id),))
     return {"message": "success"}
 
 @app.get("/lost_things/lost/thing_found/{thing_id}")
-async def thing_found(thing_id: int):
+async def lost_things_lost_thing_found(thing_id: int):
     with connection:
         cursor = connection.cursor()
         cursor.execute("""UPDATE lostThingsLostData SET isThingFound = 1 WHERE id = ?;""", (str(thing_id),))
