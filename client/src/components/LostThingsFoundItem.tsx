@@ -26,11 +26,11 @@ export function LostThingsFoundItem(props: lostThingsFoundItemProps) {
   };
 
   return (
-    <div className='lost-things-found-item'>
-      <div className='lost-things-found-item-title'>
+    <div className='lost-things-item'>
+      <div className='lost-things-item-title'>
         {props.lostThingFoundData.thingName} (№{props.lostThingFoundData.id})
       </div>
-      <div className='lost-things-found-item-content'>
+      <div className='lost-things-item-content'>
         <ul>
           <li>
             <strong>Дата и время: </strong>
@@ -52,9 +52,9 @@ export function LostThingsFoundItem(props: lostThingsFoundItemProps) {
             </li>
           )}
         </ul>
-        <div className='lost-things-found-item-thing-img-container'>
+        <div className='lost-things-item-thing-img-container'>
           <img
-            className='lost-things-found-item-thing-img'
+            className='lost-things-item-thing-img'
             src={props.lostThingFoundData.thingIMG}
           />
         </div>

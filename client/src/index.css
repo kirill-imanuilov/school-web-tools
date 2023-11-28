@@ -267,7 +267,7 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-staff-order,
 .feedback-staff-feedback,
-.lost-things-found-item {
+.lost-things-item {
   display: flex;
   justify-content: center;
   border: var(--border);
@@ -277,13 +277,13 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-staff-order,
 .feedback-staff-feedback,
-.lost-things-found-item {
+.lost-things-item {
   flex-wrap: wrap;
 }
 
 .coffee-delivery-staff-order-title,
 .feedback-staff-feedback-title,
-.lost-things-found-item-title {
+.lost-things-item-title {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -292,15 +292,15 @@ input[type='checkbox']:checked {
 
 .coffee-delivery-staff-order-content,
 .feedback-staff-feedback-content,
-.lost-things-found-item-content,
+.lost-things-item-content,
 .coffee-delivery-form-select-building,
 .useful-materials-button-link,
 .feedback-staff-feedback-email-button-link,
-.lost-things-found-item-thing-img {
+.lost-things-item-thing-img {
   width: 100%;
 }
 
-.lost-things-found-item-content {
+.lost-things-item-content {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
