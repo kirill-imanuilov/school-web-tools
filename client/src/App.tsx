@@ -7,6 +7,7 @@ import { ClockPage } from './components/pages/Clock';
 import { TimerPage } from './components/pages/Timer';
 import { StopwatchPage } from './components/pages/Stopwatch';
 import { UsefulMaterialsPage } from './components/pages/UsefulMaterials';
+import { UsefulMaterialsSchoolServicesPage } from './components/pages/UsefulMaterialsSchoolServices';
 import { UsefulMaterialsLearningSitesPage } from './components/pages/UsefulMaterialsLearningSites';
 import { UsefulMaterialsSchoolBellSchedulePage } from './components/pages/UsefulMaterialsSchoolBellSchedule';
 import { LostThingsPage } from './components/pages/LostThings';
@@ -36,6 +37,10 @@ function App() {
       <Route path='/time/clock/' element={<ClockPage />} />
       <Route path='/time/timer/' element={<TimerPage />} />
       <Route path='/time/stopwatch/' element={<StopwatchPage />} />
+      <Route
+        path='/useful_materials/school_services'
+        element={<UsefulMaterialsSchoolServicesPage />}
+      />
       <Route
         path='/useful_materials/learning_sites'
         element={<UsefulMaterialsLearningSitesPage />}

@@ -1,15 +1,8 @@
 import { UsefulMaterialsLearningSitesInterface } from '../models';
+import { UsefulMaterialsSchoolServicesInterface } from '../models';
 
 export const UsefulMaterialsLearningSitesData: UsefulMaterialsLearningSitesInterface[] =
   [
-    {
-      name: 'Параграф',
-      url: 'https://dnevnik.licey369.ru/',
-    },
-    {
-      name: 'Пеликан',
-      url: 'https://369.pelikan.online/',
-    },
     {
       name: 'GeoGebra',
       url: 'https://www.geogebra.org/',
@@ -35,3 +28,11 @@ export const UsefulMaterialsLearningSitesData: UsefulMaterialsLearningSitesInter
       url: 'https://ege.sdamgia.ru/',
     },
   ];
+
+export const UsefulMaterialsSchoolServicesData: UsefulMaterialsSchoolServicesInterface[] =
+  [
+    {
+      name: 'Пеликан',
+      url: 'https://369.pelikan.online/',
+    },
+];
