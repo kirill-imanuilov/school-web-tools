@@ -174,7 +174,7 @@ async def get_order_data(order_id: int):
 async def get_orders_data_not_done():
     with connection:
         cursor = connection.cursor()
-        data = cursor.execute("""SELECT * FROM coffeeDeliveryOrdersData WHERE isCourierSent = 0 ORDER BY deliveryTime""").fetchall()
+        data = cursor.execute("""SELECT * FROM coffeeDeliveryOrdersData WHERE isCourierSent = 0 AND date = ? ORDER BY deliveryTime""", (str(datetime.date.today()),)).fetchall()
         a = []
         for elem in data:
             a.append({
