@@ -35,4 +35,4 @@ export const UsefulMaterialsSchoolServicesData: UsefulMaterialsSchoolServicesInt
       name: 'Пеликан',
       url: 'https://369.pelikan.online/',
     },
-];
+  ];
