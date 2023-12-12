@@ -148,6 +148,7 @@ input[type='file'] {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .useful-materials-school-bell-schedule-table {
@@ -553,4 +554,30 @@ input[type='checkbox']:checked {
 
 .details-content {
   display: flex;
+}
+
+.tab-row {
+  display: flex;
+  gap: var(--gap);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding: var(--padding);
+}
+
+.tab-selected {
+  border: 1px solid var(--black-color);
+  border-radius: var(--border-radius);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-top: calc(-1 * var(--padding) - 1px);
 }
