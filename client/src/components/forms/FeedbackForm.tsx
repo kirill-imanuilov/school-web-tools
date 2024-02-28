@@ -1,5 +1,6 @@
 import '../../index.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface feedbackData {
   userEmail: string;
@@ -10,8 +11,10 @@ export function FeedbackForm() {
   const [userEmail, setUserEmail] = useState('');
   const [userMessage, setUserMessage] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmitButtonClick = () => {
-    postFeedbackData(feedbackData);
+    postFeedbackData(feedbackData).then(() => navigate('thanks'));
   };
 
   async function postFeedbackData(feedbackData: feedbackData) {

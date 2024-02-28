@@ -19,6 +19,7 @@ import { OrderTrackingPage } from './components/pages/OrderTracking';
 import { CoffeeDeliveryStaffPage } from './components/pages/CoffeeDeliveryStaff';
 import { AboutPage } from './components/pages/About';
 import { FeedbackPage } from './components/pages/Feedback';
+import { FeedbackThanksPage } from './components/pages/FeedbackThanks';
 import { StaffPage } from './components/pages/Staff';
 import { FeedbackStaffPage } from './components/pages/FeedbackStaff';
 
@@ -62,6 +63,7 @@ function App() {
         element={<CoffeeDeliveryPage />}
       />
       <Route path='/for_teachers/' element={<ForTeachersPage />} />
+      <Route path='/about/feedback/thanks' element={<FeedbackThanksPage />} />
       <Route path='/about/feedback/' element={<FeedbackPage />} />
       <Route path='/about/' element={<AboutPage />} />
       <Route path='/' element={<MainPage />} />
