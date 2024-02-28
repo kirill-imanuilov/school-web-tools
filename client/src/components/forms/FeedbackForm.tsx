@@ -14,7 +14,11 @@ export function FeedbackForm() {
   const navigate = useNavigate();
 
   const handleSubmitButtonClick = () => {
-    postFeedbackData(feedbackData).then(() => navigate('thanks'));
+    if (feedbackData.userEmail !== '' && feedbackData.userMessage !== '') {
+      postFeedbackData(feedbackData).then(() => navigate('thanks'));
+    } else {
+      alert('Все поля являются обязательными');
+    }
   };
 
   async function postFeedbackData(feedbackData: feedbackData) {
