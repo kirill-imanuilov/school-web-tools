@@ -9,7 +9,10 @@ export function AboutPage() {
         <h1 className='container-title'>О сайте</h1>
         <div className='container-content'>
           <ButtonLink to='feedback/' buttonName='Обратная связь' />
-          <ButtonLink to='https://github.com/kirill-imanuilov/school-web-tools.git' buttonName='Исходный код (GitHub)' />
+          <ButtonLink
+            to='https://github.com/kirill-imanuilov/school-web-tools.git'
+            buttonName='Исходный код (GitHub)'
+          />
           <BackButton />
         </div>
       </div>

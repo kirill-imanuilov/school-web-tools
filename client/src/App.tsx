@@ -27,17 +27,17 @@ function App() {
   return (
     <Routes>
       <Route
-        path='/staff/coffee_delivery/'
+        path='/staff/coffee_delivery'
         element={<CoffeeDeliveryStaffPage />}
       />
-      <Route path='/staff/feedback/' element={<FeedbackStaffPage />} />
-      <Route path='/staff/' element={<StaffPage />} />
+      <Route path='/staff/feedback' element={<FeedbackStaffPage />} />
+      <Route path='/staff' element={<StaffPage />} />
 
-      <Route path='/data_sending/' element={<DataSendingPage />} />
-      <Route path='/time/' element={<TimePage />} />
-      <Route path='/time/clock/' element={<ClockPage />} />
-      <Route path='/time/timer/' element={<TimerPage />} />
-      <Route path='/time/stopwatch/' element={<StopwatchPage />} />
+      <Route path='/data_sending' element={<DataSendingPage />} />
+      <Route path='/time' element={<TimePage />} />
+      <Route path='/time/clock' element={<ClockPage />} />
+      <Route path='/time/timer' element={<TimerPage />} />
+      <Route path='/time/stopwatch' element={<StopwatchPage />} />
       <Route
         path='/useful_materials/school_services'
         element={<UsefulMaterialsSchoolServicesPage />}
@@ -50,22 +50,22 @@ function App() {
         path='/useful_materials/school_bell_schedule'
         element={<UsefulMaterialsSchoolBellSchedulePage />}
       />
-      <Route path='/useful_materials/' element={<UsefulMaterialsPage />} />
-      <Route path='/lost_things/found/' element={<LostThingsFoundPage />} />
-      <Route path='/lost_things/lost/' element={<LostThingsLostPage />} />
-      <Route path='/lost_things/' element={<LostThingsPage />} />
+      <Route path='/useful_materials' element={<UsefulMaterialsPage />} />
+      <Route path='/lost_things/found' element={<LostThingsFoundPage />} />
+      <Route path='/lost_things/lost' element={<LostThingsLostPage />} />
+      <Route path='/lost_things' element={<LostThingsPage />} />
       <Route
         path='/for_teachers/coffee_delivery/order_tracking/:id'
         element={<OrderTrackingPage />}
       />
       <Route
-        path='/for_teachers/coffee_delivery/'
+        path='/for_teachers/coffee_delivery'
         element={<CoffeeDeliveryPage />}
       />
-      <Route path='/for_teachers/' element={<ForTeachersPage />} />
+      <Route path='/for_teachers' element={<ForTeachersPage />} />
       <Route path='/about/feedback/thanks' element={<FeedbackThanksPage />} />
-      <Route path='/about/feedback/' element={<FeedbackPage />} />
-      <Route path='/about/' element={<AboutPage />} />
+      <Route path='/about/feedback' element={<FeedbackPage />} />
+      <Route path='/about' element={<AboutPage />} />
       <Route path='/' element={<MainPage />} />
       <Route path='*' element={<Navigate to='/' />} />
     </Routes>
