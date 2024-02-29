@@ -35,4 +35,8 @@ export const UsefulMaterialsSchoolServicesData: UsefulMaterialsSchoolServicesInt
       name: 'Пеликан',
       url: 'https://369.pelikan.online/',
     },
+    {
+      name: 'ЭлЖур',
+      url: 'https://licey369.eljur.ru',
+    },
   ];
