@@ -42,6 +42,7 @@ html {
   width: 100%;
   text-align: center;
   font-weight: normal;
+  user-select: none;
 }
 
 button {
@@ -256,6 +257,7 @@ input[type='checkbox']:checked {
   padding: var(--padding);
   font-weight: bold;
   flex-direction: column;
+  user-select: none;
 }
 
 .coffee-delivery-order-tracking-order-status-wait {
@@ -326,6 +328,7 @@ input[type='checkbox']:checked {
   flex-direction: column;
   gap: var(--gap);
   align-items: center;
+  user-select: none;
 }
 
 .timer-values,
