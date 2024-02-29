@@ -5,27 +5,27 @@ export const UsefulMaterialsLearningSitesData: UsefulMaterialsLearningSitesInter
   [
     {
       name: 'GeoGebra',
-      url: 'https://www.geogebra.org/',
+      url: 'https://www.geogebra.org',
     },
     {
       name: 'ЯКласс',
-      url: 'https://www.yaklass.ru/',
+      url: 'https://www.yaklass.ru',
     },
     {
       name: 'РЭШ',
-      url: 'https://resh.edu.ru/',
+      url: 'https://resh.edu.ru',
     },
     {
       name: 'Решу ВПР',
-      url: 'https://vpr.sdamgia.ru/',
+      url: 'https://vpr.sdamgia.ru',
     },
     {
       name: 'Решу ОГЭ',
-      url: 'https://oge.sdamgia.ru/',
+      url: 'https://oge.sdamgia.ru',
     },
     {
       name: 'Решу ЕГЭ',
-      url: 'https://ege.sdamgia.ru/',
+      url: 'https://ege.sdamgia.ru',
     },
   ];
 
@@ -33,7 +33,7 @@ export const UsefulMaterialsSchoolServicesData: UsefulMaterialsSchoolServicesInt
   [
     {
       name: 'Пеликан',
-      url: 'https://369.pelikan.online/',
+      url: 'https://369.pelikan.online',
     },
     {
       name: 'ЭлЖур',
