@@ -19,7 +19,7 @@ export function UsefulMaterialsSchoolServicesItems(
           {props.usefulMaterialsSchoolServicesItem.name}
         </button>
       </Link>
-      <CopyButton url={props.usefulMaterialsSchoolServicesItem.url} />
+      <CopyButton text={props.usefulMaterialsSchoolServicesItem.url} />
     </div>
   );
 }

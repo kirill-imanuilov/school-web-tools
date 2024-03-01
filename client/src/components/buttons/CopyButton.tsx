@@ -4,15 +4,15 @@ import { ReactComponent as DoneIMG } from '../../IMG/done_img.svg';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface CopyButtonProps {
-  url: string;
+  text: string;
 }
 
-export function CopyButton({ url }: CopyButtonProps) {
+export function CopyButton({ text }: CopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
   function handleCopyButtonClick() {
     if (navigator.clipboard) {
       try {
-        navigator.clipboard.writeText(url);
+        navigator.clipboard.writeText(text);
       } catch (e) {
         alert('Возникла ошибка');
         console.log(e);
