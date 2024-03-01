@@ -3,13 +3,13 @@ import { ReactComponent as ContentCopyIMG } from '../../IMG/content_copy_img.svg
 import { ReactComponent as DoneIMG } from '../../IMG/done_img.svg';
 import { AnimatePresence, motion } from 'framer-motion';
 
-interface LinkCopyButtonProps {
+interface CopyButtonProps {
   url: string;
 }
 
-export function LinkCopyButton({ url }: LinkCopyButtonProps) {
+export function CopyButton({ url }: CopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
-  function handleLinkCopyButtonClick() {
+  function handleCopyButtonClick() {
     if (navigator.clipboard) {
       try {
         navigator.clipboard.writeText(url);
@@ -27,7 +27,7 @@ export function LinkCopyButton({ url }: LinkCopyButtonProps) {
   const MotionDoneIMG = motion(DoneIMG);
 
   return (
-    <button className='link-copy-button' onClick={handleLinkCopyButtonClick}>
+    <button className='link-copy-button' onClick={handleCopyButtonClick}>
       <AnimatePresence initial={false}>
         {!isCopied && (
           <MotionContentCopyIMG

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { UsefulMaterialsSchoolServicesInterface } from '../models';
-import { LinkCopyButton } from './buttons/LinkCopyButton';
+import { CopyButton } from './buttons/CopyButton';
 
 interface UsefulMaterialsSchoolServicesItemsProps {
   usefulMaterialsSchoolServicesItem: UsefulMaterialsSchoolServicesInterface;
@@ -19,7 +19,7 @@ export function UsefulMaterialsSchoolServicesItems(
           {props.usefulMaterialsSchoolServicesItem.name}
         </button>
       </Link>
-      <LinkCopyButton url={props.usefulMaterialsSchoolServicesItem.url} />
+      <CopyButton url={props.usefulMaterialsSchoolServicesItem.url} />
     </div>
   );
 }
